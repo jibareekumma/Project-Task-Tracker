@@ -1,0 +1,40 @@
+.taskContainer {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.taskContainer .addTask {
+  width: 100%;
+  height: 10rem;
+  border: 0.5px dashed rgb(51, 52, 56);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+.taskContainer .addTask:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: rgb(208, 209, 214);
+}
+
+@media (min-width: 768px) {
+  .taskContainer {
+    gap: 2rem;
+  }
+  .taskContainer .addTask {
+    height: 12rem;
+  }
+}
+@media (min-width: 1024px) {
+  .taskContainer {
+    gap: 2.5rem;
+  }
+  .taskContainer .addTask {
+    height: 14rem;
+  }
+}/*# sourceMappingURL=TaskAdd.css.map */

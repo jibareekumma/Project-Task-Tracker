@@ -1,0 +1,54 @@
+
+
+
+$bold-text: black;
+$medium-text: rgb(51, 52, 56);
+$light-text: rgb(89, 89, 92);
+
+
+.taskContainer{
+    // border: 2px solid black;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .addTask{
+        width: 100%;
+        height: 10rem;
+        border: 0.5px dashed $medium-text;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            background-color: rgb(208, 209, 214);
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .taskContainer{
+        gap: 2rem;
+
+        .addTask{
+            height: 12rem;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .taskContainer{
+        gap: 2.5rem;
+
+        .addTask{
+            height: 14rem;
+        }
+    }   
+}

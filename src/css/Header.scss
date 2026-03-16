@@ -1,0 +1,79 @@
+
+$bold-text: black;
+$medium-text: rgb(51, 52, 56);
+$light-text: rgb(89, 89, 92);
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+}
+
+.upper-div{
+    // border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .header-text{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        h4{
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+            word-spacing: 1px;
+            color: $medium-text;
+        }
+        p{
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            color: $light-text;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+
+    button{
+        width: 8rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        color: white;
+        background-color: black;
+        font-size: 1.2rem;
+        border: none;
+        margin-top: 0.5rem;
+        letter-spacing: 0.5px;
+        &:hover{
+            cursor: pointer;
+            background-color: $medium-text;
+        }
+    }
+}
+
+.greeting-text{
+    font-size: 2.5rem;
+    font-weight: 300;
+    word-spacing: 1.5px;
+    letter-spacing: 0.3px;
+
+    span{
+        font-size: 2rem;
+        color: $medium-text;
+        
+    }
+}
+
+
+@media (min-width: 768px){
+    .upper-div button{
+        width: 12rem;
+        font-size: 1.5rem;
+    }
+}

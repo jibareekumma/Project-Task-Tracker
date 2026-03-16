@@ -1,0 +1,66 @@
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.upper-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.upper-div .header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.upper-div .header-text h4 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: rgb(51, 52, 56);
+}
+.upper-div .header-text p {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  color: rgb(89, 89, 92);
+  font-weight: 300;
+  font-style: italic;
+}
+.upper-div button {
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  font-size: 1.2rem;
+  border: none;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+.upper-div button:hover {
+  cursor: pointer;
+  background-color: rgb(51, 52, 56);
+}
+
+.greeting-text {
+  font-size: 2.5rem;
+  font-weight: 300;
+  word-spacing: 1.5px;
+  letter-spacing: 0.3px;
+}
+.greeting-text span {
+  font-size: 2rem;
+  color: rgb(51, 52, 56);
+}
+
+@media (min-width: 768px) {
+  .upper-div button {
+    width: 12rem;
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=Header.css.map */

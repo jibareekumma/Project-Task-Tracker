@@ -1,10 +1,6 @@
 
 import Header from "./components/Header"
 import TaskAdd from "./components/TaskAdd"
-import Modal from "./components/Modal"
-import Backkdrop from "./components/Backdrop"
-
-
 
 
 function App() {
@@ -14,9 +10,7 @@ function App() {
     <>
       <Header />
       <TaskAdd />
-      <Backkdrop />
-      <Modal />
-      
+    
     </>
   )
 }

@@ -3,7 +3,7 @@
   width: 70vw;
   height: auto;
   padding: 2rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 3rem;
   background-color: white;
@@ -12,7 +12,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 20;
+  z-index: 999;
+  pointer-events: auto;
 }
 .modalWindow .headerContainer {
   display: flex;
@@ -26,6 +27,9 @@
   letter-spacing: 0.5px;
   color: rgb(51, 52, 56);
   font-weight: 400;
+}
+.modalWindow .headerContainer img {
+  cursor: pointer;
 }
 .modalWindow form {
   display: flex;
@@ -57,6 +61,8 @@
   .modalWindow {
     padding: 2.5rem;
     gap: 4rem;
+    width: 50vw;
+    height: auto;
   }
   .modalWindow .headerContainer h3 {
     font-size: 2rem;
@@ -76,6 +82,11 @@
     font-weight: 300;
   }
 }
+@media (min-width: 1024px) {
+  .modalWindow {
+    width: 40vw;
+  }
+}
 .backdrop {
   position: fixed;
   inset: 0;
@@ -83,5 +94,7 @@
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 10;
-  display: flex;
+  pointer-events: auto;
+  cursor: pointer;
+  display: none;
 }/*# sourceMappingURL=Modal.css.map */

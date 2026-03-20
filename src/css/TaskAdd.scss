@@ -4,6 +4,11 @@
 $bold-text: black;
 $medium-text: rgb(51, 52, 56);
 $light-text: rgb(89, 89, 92);
+$task-bg: rgb(202, 202, 230);
+$letter-spacing-small: 0.5px;
+$letter-spacing-big: 1px;
+$text-weight-big: 300;
+
 
 
 .taskContainer{
@@ -31,15 +36,74 @@ $light-text: rgb(89, 89, 92);
             background-color: rgb(208, 209, 214);
         }
     }
+
+
+    .mainContainer{
+        
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 10rem;
+        background-color: $task-bg;
+        color: black;
+        border-radius: 15px;
+        &:hover{
+            cursor: pointer;
+        }
+
+        h5{
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+            font-weight: $text-weight-big;
+
+        }
+
+        .percentageSec{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            // border: 1px solid black;
+            height: auto;
+            align-items: center;
+
+            h6{
+                font-weight: $text-weight-big;
+                font-size: 1.5rem;
+                letter-spacing: $letter-spacing-small;
+            }
+            p{
+                font-weight: 500;
+                font-size: 1.2rem;
+                font-style: italic;
+            }
+        }
+        img{
+            width: 100%;
+            height: auto;
+            // border: 2px solid green;
+        }
+    }
 }
 
 @media (min-width: 768px){
     .taskContainer{
         gap: 2rem;
+        display: flex;
+        flex-direction: column;
 
         .addTask{
-            height: 12rem;
+            height: 10rem;
+            width: 30%;
         }
+        .mainContainer{
+            height: 14rem;
+            width: 60%;
+        }
+
+
     }
 }
 
@@ -50,5 +114,7 @@ $light-text: rgb(89, 89, 92);
         .addTask{
             height: 14rem;
         }
+
+
     }   
 }

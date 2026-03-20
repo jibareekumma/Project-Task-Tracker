@@ -11,7 +11,7 @@ $light-text: rgb(89, 89, 92);
     width: 70vw;
     height: auto;
     padding: 2rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 3rem;
     background-color: white;
@@ -20,7 +20,8 @@ $light-text: rgb(89, 89, 92);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 20;
+    z-index: 999;
+    pointer-events: auto;
     
 
 
@@ -38,6 +39,9 @@ $light-text: rgb(89, 89, 92);
             letter-spacing: 0.5px;
             color: $medium-text;
             font-weight: 400;
+        }
+        img{
+            cursor: pointer;
         }
     }
 
@@ -80,6 +84,8 @@ $light-text: rgb(89, 89, 92);
     .modalWindow{
         padding: 2.5rem;
         gap: 4rem;
+        width: 50vw;
+        height: auto;
 
         .headerContainer{
 
@@ -107,6 +113,13 @@ $light-text: rgb(89, 89, 92);
     }
 }
 
+@media (min-width: 1024px){
+    .modalWindow{
+
+        width: 40vw;
+    }
+}
+
 .backdrop {
 
   position: fixed;
@@ -115,6 +128,8 @@ $light-text: rgb(89, 89, 92);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 10;
-  display: flex;
+  pointer-events: auto;
+  cursor: pointer;
+  display: none;
 
 }

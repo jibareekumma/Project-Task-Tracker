@@ -1,1 +1,96 @@
-/*# sourceMappingURL=EntireTask.css.map */
+.headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.headers h5 {
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  color: black;
+}
+.headers p {
+  color: rgb(51, 52, 56);
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+.headers p:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.taskContainerM {
+  border: none;
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+}
+.taskContainerM .heading {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.taskContainerM .heading span {
+  padding: 0.2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(218, 218, 236);
+}
+.taskContainerM .heading span img {
+  width: 25px;
+}
+.taskContainerM .heading h6 {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: rgb(51, 52, 56);
+}
+.taskContainerM .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.taskContainerM .details .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.taskContainerM .details .texts h5 {
+  color: black;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.taskContainerM .details .texts p {
+  color: rgb(51, 52, 56);
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+.taskContainerM .details button {
+  background-color: rgb(34, 35, 36);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+}
+.taskContainerM .details button img {
+  width: 35px;
+}
+.taskContainerM .details button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=EntireTask.css.map */

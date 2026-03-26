@@ -4,6 +4,8 @@ import '../css/Modal.css'
 import CloseIcon from '../icons/xmark-solid.png'
 import SingleTask from './SingleTask';
 import Header from './Header';
+import EntireTask from './EntireTask';
+import RecentHeader from './RecentHeader';
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
@@ -81,6 +83,21 @@ const handleDel = function(index){
             
             <div className="addTask" onClick={modalDisplay}>  + </div>
         </div>
+
+        <RecentHeader />
+
+            {
+                projects.map( (proj, index) => (
+                    <EntireTask 
+                    key = {index}
+                     name = {proj.name}
+                     category = {proj.category}
+                     index = {index}
+                     handleDel = {handleDel}
+                    />
+                )
+            ) }
+        
 
         <div className="modalWindow" style={{ display: showModal ? 'flex' : 'none' }}>
             <div className="headerContainer">

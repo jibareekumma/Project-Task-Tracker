@@ -1,7 +1,7 @@
 // import "../css/Header"
 import "../css/Header.css"
 
-const Header = function(){
+const Header = function( {cancelAll} ){
 
     return <header>
         <div className = "upper-div">
@@ -9,7 +9,9 @@ const Header = function(){
                 <h4>Good Morning, User</h4>
                 <p>Saturday, 14 march</p>
             </div>
-            <button className = "clear-btn"> Clear All</button>
+            <button className = "clear-btn" 
+                onClick = {cancelAll}
+            > Clear All</button>
         </div>
 
             <h3 className = "greeting-text">

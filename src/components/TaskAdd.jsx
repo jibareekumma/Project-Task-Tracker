@@ -1,14 +1,23 @@
 import '../css/TaskAdd.css'
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import '../css/Modal.css'
 import CloseIcon from '../icons/xmark-solid.png'
 import SingleTask from './SingleTask';
+import Header from './Header';
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
     const [project, setProject] = useState('')
-    const [projects, setProjects] = useState([])
     const [category, setCategory] = useState('')
+    const [projects, setProjects] = useState(() => {
+    const saved = localStorage.getItem('projects')
+    return saved ? JSON.parse(saved) : []
+})
+
+useEffect(() => {
+        localStorage.setItem('projects', JSON.stringify(projects))
+    }, [projects])
+    
 
     const handleCreate = function(){
         
@@ -26,9 +35,12 @@ const TaskAdd = function () {
 
     const cancelAll = function(){
 
-        setProject('')
-        setCategory('')
-        setShowModal(false)
+        // setProject('')
+        // setCategory('')
+        // setShowModal(false)
+
+        setProjects([])
+        
     }
 
     const modalDisplay = function () {
@@ -39,7 +51,21 @@ const TaskAdd = function () {
         setShowModal(false);
     };
 
+  
+const handleDel = function(index){
+    console.log("Button Clicked")
+    setProjects((prev) => prev.filter(
+        (n, i) => i !== index
+    ))
+}
+
+
+
     return <>
+
+    <Header cancelAll = {cancelAll} />
+
+
         <div className="taskContainer">
 
             {projects.map( (proj, index) => (
@@ -47,6 +73,8 @@ const TaskAdd = function () {
                      key = {index}
                      name = {proj.name}
                      category = {proj.category}
+                     index = {index}
+                     handleDel = {handleDel}
                      />
                 )
             )}

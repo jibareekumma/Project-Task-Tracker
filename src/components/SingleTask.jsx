@@ -3,13 +3,20 @@ import '../css/TaskAdd.css'
 
 
 
-const SingleTask = function( {name, category} ){
+const SingleTask = function( {name, category, handleDel, index} ){
 
     return <>
 
              <div className = 'mainContainer'>
+
+            <div className = 'nameContainer'>
     
             <h5> {name} </h5>
+            <img src="icons/trash-solid-full.svg" 
+            alt="Trash Icon" 
+            onClick = { () => handleDel(index)}
+            />
+            </div>
             
             <div>
             <div className = 'percentageSec'>

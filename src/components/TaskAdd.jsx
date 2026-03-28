@@ -6,44 +6,30 @@ import SingleTask from './SingleTask';
 import Header from './Header';
 import EntireTask from './EntireTask';
 import RecentHeader from './RecentHeader';
+import { useContext } from 'react';
+import { ProjectContext } from '../context/ProjectContext';
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
-    const [project, setProject] = useState('')
+    const { projects, setProjects, handleDel, cancelAll }
+    = useContext(ProjectContext)
+    const [project, setProject] = useState('') 
     const [category, setCategory] = useState('')
-    const [projects, setProjects] = useState(() => {
-    const saved = localStorage.getItem('projects')
-    return saved ? JSON.parse(saved) : []
-})
 
-useEffect(() => {
-        localStorage.setItem('projects', JSON.stringify(projects))
-    }, [projects])
-    
+    const [showToast, setShowToast] = useState(false)
 
-    const handleCreate = function(){
-        
-        const newProject = {
-            name: project,
-            category: category
-        }
+    const handleSubmit = function(){ 
+    handleCreate(project, category)
+    setProject('')
+    setCategory('')
+    setShowModal(false)
+    setShowToast(true)
 
-        setProjects( (prev) => [...prev, newProject])
+    setTimeout(function(){
+        setShowToast(false)  
+    }, 5000)
+}
 
-        setProject('')
-        setCategory('')
-        setShowModal(false)
-    }
-
-    const cancelAll = function(){
-
-        // setProject('')
-        // setCategory('')
-        // setShowModal(false)
-
-        setProjects([])
-        
-    }
 
     const modalDisplay = function () {
         setShowModal(true);
@@ -53,14 +39,13 @@ useEffect(() => {
         setShowModal(false);
     };
 
-  
-const handleDel = function(index){
-    console.log("Button Clicked")
-    setProjects((prev) => prev.filter(
-        (n, i) => i !== index
-    ))
+    const handleCreate = function(project, category) {
+    const newProject = {
+        name: project,
+        category: category
+    }
+    setProjects((prev) => [...prev, newProject])
 }
-
 
 
     return <>
@@ -70,7 +55,7 @@ const handleDel = function(index){
 
         <div className="taskContainer">
 
-            {projects.map( (proj, index) => (
+            {projects.slice(0, 5).map( (proj, index) => (
                      <SingleTask 
                      key = {index}
                      name = {proj.name}
@@ -85,9 +70,10 @@ const handleDel = function(index){
         </div>
 
         <RecentHeader />
+        
 
             {
-                projects.map( (proj, index) => (
+                projects.slice(0, 3).map( (proj, index) => (
                     <EntireTask 
                     key = {index}
                      name = {proj.name}
@@ -143,7 +129,7 @@ const handleDel = function(index){
                     <option value="Other">Other</option>
                 </select>
                 <button type='button'
-                        onClick = {handleCreate}
+                        onClick = {handleSubmit}
                 >Create</button>
             </form>
         </div>
@@ -153,6 +139,11 @@ const handleDel = function(index){
             style={{ display: showModal ? 'flex' : 'none' }}
             onClick={closeModal}
         >
+        </div>
+
+        <div className="toast" style=
+        {{ display: showToast ? 'flex' : 'none' }}>
+        <p>Your project has been added Successfully!!! 🎉</p>
         </div>
     </>
 }

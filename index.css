@@ -10,11 +10,10 @@ html {
 
 body {
   margin: 1rem;
-  background-color: rgb(241, 246, 250);
 }
 
 @media (min-width: 768px) {
   body {
     margin: 2rem;
   }
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

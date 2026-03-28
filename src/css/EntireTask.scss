@@ -4,6 +4,7 @@ $bold-text: black;
 $medium-text: rgb(51, 52, 56);
 $light-text: rgb(89, 89, 92);
 $task-bg: rgb(202, 202, 230);
+$task-bg-hover: rgb(199, 199, 216);
 $letter-spacing-small: 0.5px;
 $letter-spacing-big: 1px;
 $text-weight-small: 300;
@@ -36,6 +37,29 @@ $text-weight-small: 300;
             color: blue;
         }
     }
+
+    .seeAllBtn{
+
+            width: 8rem;
+            height: 2.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: white;
+            background-color: black;
+            font-size: 1.2rem;
+            border: none;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            &:hover{
+            cursor: pointer;
+            background-color: $medium-text;
+        
+    }
+
+
+}
 }
 
 main{
@@ -47,10 +71,13 @@ main{
 
 .taskContainerM{
     border: none;
-    background-color: white;
+    background-color: $task-bg;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 15px;
+    &:hover{
+        cursor: pointer;
+    }
 
 
     .heading{
@@ -59,7 +86,21 @@ main{
         gap: 0.3rem;
         align-items: center;
         margin-bottom: 1.5rem;
+        justify-content: space-between;
 
+        .iconContainer{
+            // border: 2px solid black;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+
+        .percentageContainer{
+            font-size: 2rem;
+            font-style: italic;
+            color: blue;
+        }
 
         span{
             padding: 0.2rem;
@@ -72,9 +113,9 @@ main{
         }
         }
         h6{
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             letter-spacing: $letter-spacing-small;
-            font-weight: 600;
+            font-weight: 300;
             color: $medium-text;
         }
     }
@@ -123,5 +164,84 @@ main{
                 cursor: pointer;
             }
         }
+    }
+}
+
+
+@media (min-width: 768px) {
+    
+
+    .taskContainerM{
+        width: 70%;
+        height: 12rem;
+    }
+}
+
+
+
+// All Projects styling Sections
+.allProjects{
+    img{
+        width: 30px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+   .headers{
+    // border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span{
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $task-bg;
+        border: none;
+        border-radius: 50%;
+
+        &:hover{
+            cursor: pointer;
+            background-color: $task-bg-hover;
+        }
+    }
+
+        h2{
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: $letter-spacing-small;
+
+        }
+
+        button{
+            width: 7rem;
+            height: 2.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            color: white;
+            background-color: black;
+            font-size: 1rem;
+            border: none;
+            letter-spacing: 0.5px;
+            &:hover{
+            cursor: pointer;
+            background-color: $medium-text;
+        }
+        }
+   }
+
+    .mainContainerMM{
+    
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        // border: 3px solid green;
     }
 }

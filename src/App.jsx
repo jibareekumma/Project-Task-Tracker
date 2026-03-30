@@ -7,6 +7,7 @@ import AllProjects from "./components/AllProjects"
 
 
 
+
 function App() {
 
   const [projects, setProjects] = useState(() => {
@@ -24,6 +25,7 @@ function App() {
       />} />
       <Route path="/all-projects" element={<AllProjects
       />} />
+     
     
     </Routes>
 

@@ -149,7 +149,7 @@ main{
         }
 
         button{
-            background-color: rgb(34, 35, 36);
+            background-color: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -157,7 +157,7 @@ main{
             border-radius: 50%;
 
             img{
-                width: 35px;
+                width: 30px;
 
             }
             &:hover{
@@ -174,7 +174,10 @@ main{
     .taskContainerM{
         width: 70%;
         height: 12rem;
+        margin-right: 15%;
+        margin-left: 15%;
     }
+   
 }
 
 

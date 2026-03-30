@@ -17,6 +17,7 @@ const TaskAdd = function () {
     const [category, setCategory] = useState('')
 
     const [showToast, setShowToast] = useState(false)
+    const [toastLoader, setToastLoader] = useState(0)
 
     const handleSubmit = function(){ 
     handleCreate(project, category)
@@ -24,10 +25,12 @@ const TaskAdd = function () {
     setCategory('')
     setShowModal(false)
     setShowToast(true)
+    setToastLoader((prev) => prev + 1)
 
     setTimeout(function(){
         setShowToast(false)  
-    }, 5000)
+    }, 2000)
+
 }
 
 
@@ -41,8 +44,11 @@ const TaskAdd = function () {
 
     const handleCreate = function(project, category) {
     const newProject = {
+        id: Date.now(),
         name: project,
-        category: category
+        category: category,
+        tasks: []
+        
     }
     setProjects((prev) => [...prev, newProject])
 }
@@ -143,7 +149,14 @@ const TaskAdd = function () {
 
         <div className="toast" style=
         {{ display: showToast ? 'flex' : 'none' }}>
-        <p>Your project has been added Successfully!!! 🎉</p>
+        <p>Your project has been added Successfully!!! </p>
+        <div className = 'toastLoader' key = {toastLoader}></div>
+        </div>
+
+        <div className = 'toastBackdrop'
+        style = {{ display: showToast ? 'flex' : 'none'}}
+        onClick = { () => setShowToast(false)}
+        >
         </div>
     </>
 }

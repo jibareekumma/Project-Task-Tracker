@@ -25,12 +25,13 @@ const EntireTask = function( {name, category, handleDel, index} ){
             <div className = 'details'>
 
                 <div className ='texts'>
-                <h5 onClick = {handleDel}> {name} </h5>
+                <h5> {name} </h5>
                 <p> {category} </p>
                 </div>
                 <button>
-                    <img src="icons/right-arrow-icon.png" 
-                    alt="Right Arrow Icon" />
+                    <img src="icons/trash-solid-full.svg" 
+                    alt="Right Arrow Icon" 
+                    onClick = {() => handleDel(index)}/>
                 </button>
             </div>
         </div>

@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom"
 import TaskAdd from "./components/TaskAdd"
 import { useState } from "react"
 import AllProjects from "./components/AllProjects"
-
+import ProjectDetail from './components/ProjectDetail'
 
 
 
@@ -25,7 +25,8 @@ function App() {
       />} />
       <Route path="/all-projects" element={<AllProjects
       />} />
-     
+     <Route path = "/project/:id" element = {<ProjectDetail/>}>
+      </Route>
     
     </Routes>
 

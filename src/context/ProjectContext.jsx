@@ -27,6 +27,11 @@ export const ProjectProvider = function( {children} ){
         
     }
 
+const handleSubmit = function(e){
+    console.log('It worked')
+    e.preventDefault()
+}
+
 const handleCreate = function(project, category) {
     const newProject = {
         name: project,

@@ -1,9 +1,15 @@
 import '../css/TaskAdd.css'
 // import dummyLoading from '../icons/dummy-loading.jpeg'
+import { useNavigate } from 'react-router-dom'
 
 
+const SingleTask = function( {name, category, handleDel, index, id} ){
 
-const SingleTask = function( {name, category, handleDel, index} ){
+    const navigate = useNavigate()
+
+    const test = function(){
+        console.log("Logged IN")
+    }
 
     return <>
 
@@ -12,10 +18,19 @@ const SingleTask = function( {name, category, handleDel, index} ){
             <div className = 'nameContainer'>
     
             <h5> {name} </h5>
+            <div className = "icons">
             <img src="icons/trash-solid-full.svg" 
             alt="Trash Icon" 
+            title = 'Delete project'
             onClick = { () => handleDel(index)}
             />
+            <img src="icons/open page icon.png" 
+            alt="Open Page Icon" 
+            title='Open project'
+            onClick = { ()=> navigate(`/project/${id}`)}
+            />
+            </div>
+
             </div>
             
             <div>
@@ -25,9 +40,7 @@ const SingleTask = function( {name, category, handleDel, index} ){
                     <p>0%</p>
                     
             </div>
-            <img src = 'icons/dummy-loadingM.png' 
-                 
-            alt="" />
+            
             </div>
         </div>
     </>

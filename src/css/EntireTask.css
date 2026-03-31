@@ -113,18 +113,18 @@ main {
   font-size: 1.3rem;
   letter-spacing: 0.5px;
 }
-.taskContainerM .details button {
+.taskContainerM .details .icons {
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
-  border-radius: 50%;
+  width: 15%;
+  justify-content: space-between;
 }
-.taskContainerM .details button img {
-  width: 30px;
+.taskContainerM .details .icons img {
+  width: 25px;
 }
-.taskContainerM .details button:hover {
+.taskContainerM .details .icons:hover {
   cursor: pointer;
 }
 

@@ -148,16 +148,18 @@ main{
             }
         }
 
-        button{
+        .icons{
             background-color: transparent;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: none;
-            border-radius: 50%;
+            // border: 2px solid green;
+            width: 15%;
+            justify-content: space-between;
+            
 
             img{
-                width: 30px;
+                width: 25px;
 
             }
             &:hover{

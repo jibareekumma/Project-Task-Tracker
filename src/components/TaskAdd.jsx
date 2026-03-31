@@ -67,6 +67,7 @@ const TaskAdd = function () {
                      name = {proj.name}
                      category = {proj.category}
                      index = {index}
+                     id = {proj.id}
                      handleDel = {handleDel}
                      />
                 )
@@ -85,6 +86,7 @@ const TaskAdd = function () {
                      name = {proj.name}
                      category = {proj.category}
                      index = {index}
+                     id = {proj.id}
                      handleDel = {handleDel}
                     />
                 )

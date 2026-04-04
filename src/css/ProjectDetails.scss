@@ -27,12 +27,29 @@ header{
         }
     }
 
-    h3{
+    .detailsHeader{
+        display: flex;
+        gap: 1rem;
+        flex-direction: row;
+        align-items: flex-end;
+
+
+        h3{
         font-size: 1.7rem;
         letter-spacing: $letter-spacing-small;
         word-spacing: 1px;
         font-weight: 600;
     }
+
+    p{
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: normal;
+        color: blue;
+
+    }
+    }
+    
 }
 
 main{
@@ -134,11 +151,10 @@ form{
     flex-direction: column;
     gap: 2rem;
 
-    h3{
+        h3{
         letter-spacing: 0.5px;
         font-weight: 600;
         font-size: 1.5rem;
-    
     }
 
     .completedContainer{

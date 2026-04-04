@@ -3,7 +3,7 @@ import "../css/Header.css"
 
 const Header = function( {cancelAll} ){
 
-    return <header>
+    return <header className = "first-page-header">
         <div className = "upper-div">
             <div className = "header-text">
                 <h4>Good Morning, User</h4>
@@ -14,11 +14,14 @@ const Header = function( {cancelAll} ){
             > Clear All</button>
         </div>
 
+
+        <div className = 'text-section'>
             <h3 className = "greeting-text">
                 Let's Build Something
                 <br />
                 <span>    Great today! </span>
             </h3>
+            </div>
     </header>
 }
 

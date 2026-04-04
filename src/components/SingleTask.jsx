@@ -3,46 +3,55 @@ import '../css/TaskAdd.css'
 import { useNavigate } from 'react-router-dom'
 
 
+
 const SingleTask = function( {name, category, handleDel, index, id} ){
 
     const navigate = useNavigate()
 
-    const test = function(){
-        console.log("Logged IN")
-    }
+    const saved = localStorage.getItem(`tasks-${id}`)
+const savedCompleted = localStorage.getItem(`completed-${id}`)
+
+const tasks = saved ? JSON.parse(saved) : []
+const completed = savedCompleted ? JSON.parse(savedCompleted) : []
+
+const totalCount = tasks.length + completed.length
+const percentageCount = totalCount === 0 ? 0 : Math.round((completed.length / totalCount) * 100)
+
 
     return <>
 
-             <div className = 'mainContainer'>
+            
+        <div className='singleTask' 
+            onClick={() => navigate(`/project/${id}`)}>
+               <div className = 'task-headers'>
+            <h5>{name}</h5>
 
-            <div className = 'nameContainer'>
-    
-            <h5> {name} </h5>
-            <div className = "icons">
-            <img src="icons/trash-solid-full.svg" 
-            alt="Trash Icon" 
-            title = 'Delete project'
-            onClick = { () => handleDel(index)}
-            />
-            <img src="icons/open page icon.png" 
-            alt="Open Page Icon" 
-            title='Open project'
-            onClick = { ()=> navigate(`/project/${id}`)}
+             <img src="/icons/trash-solid-full.svg"
+            alt="Delete"
+            className = 'trash-icon'
+            onClick={(e) => {
+                e.stopPropagation()  
+                handleDel(index)
+            }}
             />
             </div>
 
+
+            <div className = 'task-footers'>
+
+            <p>{category}</p>
+           
+                    <div className = 'task-icons'>
+                    <span className ='circle-icons'>
+                    </span>
+                    <p className = 'percentage-text'>
+                        {percentageCount}%
+                    </p>
+                    </div>
             </div>
-            
-            <div>
-            <div className = 'percentageSec'>
-                
-                    <h6> {category} </h6>
-                    <p>0%</p>
-                    
+
             </div>
-            
-            </div>
-        </div>
+
     </>
 }
 

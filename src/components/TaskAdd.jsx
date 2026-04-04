@@ -11,7 +11,7 @@ import { ProjectContext } from '../context/ProjectContext';
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
-    const { projects, setProjects, handleDel, cancelAll }
+    const { projects, setProjects, handleDel, cancelAll, handleCreate }
     = useContext(ProjectContext)
     const [project, setProject] = useState('') 
     const [category, setCategory] = useState('')
@@ -42,16 +42,16 @@ const TaskAdd = function () {
         setShowModal(false);
     };
 
-    const handleCreate = function(project, category) {
-    const newProject = {
-        id: Date.now(),
-        name: project,
-        category: category,
-        tasks: []
+//     const handleCreate = function(project, category) {
+//     const newProject = {
+//         id: Date.now(),
+//         name: project,
+//         category: category,
+//         tasks: []
         
-    }
-    setProjects((prev) => [...prev, newProject])
-}
+//     }
+//     setProjects((prev) => [...prev, newProject])
+// }
 
 
     return <>
@@ -59,7 +59,7 @@ const TaskAdd = function () {
     <Header cancelAll = {cancelAll} />
 
 
-        <div className="taskContainer">
+        <div className="first-page-task-container">
 
             {projects.slice(0, 5).map( (proj, index) => (
                      <SingleTask 

@@ -34,17 +34,20 @@ const handleSubmit = function(e){
 
 const handleCreate = function(project, category) {
     const newProject = {
+        id: Date.now(),
         name: project,
-        category: category
+        category: category,
+        task: []
     }
     setProjects((prev) => [...prev, newProject])
 }
 
     return (
         <>
-        <ProjectContext.Provider value={{ projects, 
-            setProjects, handleDel, cancelAll }}>
+        <ProjectContext.Provider value={{ projects, setProjects, handleDel, 
+        cancelAll, handleCreate }}>
       {children}
+      
     </ProjectContext.Provider>
         </>
     )

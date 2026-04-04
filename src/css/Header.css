@@ -1,12 +1,14 @@
-header {
+.first-page-header {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 .upper-div {
   display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -45,6 +47,11 @@ header {
 .upper-div button:hover {
   cursor: pointer;
   background-color: rgb(51, 52, 56);
+}
+
+.text-section {
+  display: flex;
+  width: 100%;
 }
 
 .greeting-text {

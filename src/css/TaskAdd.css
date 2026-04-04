@@ -1,4 +1,4 @@
-.taskContainer {
+.first-page-task-container {
   width: 100%;
   height: auto;
   display: grid;
@@ -6,7 +6,7 @@
   gap: 1rem;
   margin-bottom: 2rem;
 }
-.taskContainer .addTask {
+.first-page-task-container .addTask {
   width: 100%;
   height: 10rem;
   border: 0.5px dashed rgb(51, 52, 56);
@@ -16,66 +16,71 @@
   align-items: center;
   font-size: 4rem;
 }
-.taskContainer .addTask:hover {
+.first-page-task-container .addTask:hover {
   cursor: pointer;
   transform: scale(1.1);
   background-color: rgb(208, 209, 214);
 }
-.taskContainer .mainContainer {
-  width: 100%;
-  padding: 1rem;
+
+.singleTask {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
   height: 10rem;
   background-color: rgb(202, 202, 230);
-  color: black;
-  border-radius: 15px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 3px 10px rgb(211, 211, 223);
 }
-.taskContainer .mainContainer:hover {
+.singleTask img {
+  width: 30px;
+  height: 30px;
+}
+.singleTask img:hover {
   cursor: pointer;
 }
-.taskContainer .mainContainer .nameContainer {
+.singleTask .task-headers {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.taskContainer .mainContainer .nameContainer h5 {
-  font-size: 1.7rem;
-  letter-spacing: 0.5px;
-  font-weight: 700;
-}
-.taskContainer .mainContainer .nameContainer .icons {
-  display: flex;
-  flex-direction: row;
-  width: 25%;
-  justify-content: space-between;
-}
-.taskContainer .mainContainer .nameContainer .icons img {
-  width: 20px;
-  height: 20px;
-}
-.taskContainer .mainContainer .percentageSec {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 0rem;
-  height: auto;
   align-items: center;
 }
-.taskContainer .mainContainer .percentageSec h6 {
-  font-weight: 300;
-  font-size: 1.5rem;
+.singleTask .task-footers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.singleTask .task-footers .task-icons {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.singleTask .task-footers .task-icons .circle-icons {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.singleTask .task-footers .task-icons .percentage-text {
+  font-size: 1.7rem;
+  font-weight: 200;
+  color: blue;
+}
+.singleTask h5 {
   letter-spacing: 0.5px;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
-.taskContainer .mainContainer .percentageSec p {
-  font-weight: 500;
-  font-size: 1.4rem;
+.singleTask p {
+  font-size: 1.5rem;
+  font-weight: 300;
   font-style: italic;
-}
-.taskContainer .mainContainer img {
-  width: 100%;
-  height: auto;
+  letter-spacing: 0.5px;
 }
 
 .toast {

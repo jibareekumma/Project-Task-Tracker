@@ -10,19 +10,17 @@ import ProjectDetail from './components/ProjectDetail'
 
 function App() {
 
-  const [projects, setProjects] = useState(() => {
-  const saved = localStorage.getItem('projects')
-  return saved ? JSON.parse(saved) : []
-})
+  // const [projects, setProjects] = useState(() => {
+  // const saved = localStorage.getItem('projects')
+  // return saved ? JSON.parse(saved) : []
+// })
   
   return (
     <>
     
        <Routes>
 
-      <Route path="/" element={<TaskAdd 
-      projects = {projects} setProjects = {setProjects}
-      />} />
+      <Route path="/" element={<TaskAdd />} />
       <Route path="/all-projects" element={<AllProjects
       />} />
      <Route path = "/project/:id" element = {<ProjectDetail/>}>

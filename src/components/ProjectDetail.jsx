@@ -1,7 +1,7 @@
 
 
 import { useParams, useNavigate } from 'react-router-dom'
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { ProjectContext } from '../context/ProjectContext'
 import '../css/ProjectDetails.css'
 
@@ -13,10 +13,26 @@ const ProjectDetail = function(){
     const { projects, addTask } = useContext(ProjectContext)
     const navigate = useNavigate()
     const [taskName, setTaskName] = useState('')
-    const [task, setTask] = useState([])
+
+    const [task, setTask] = useState(() => {
+    const saved = localStorage.getItem(`tasks-${id}`)
+    return saved ? JSON.parse(saved) : []
+})
 
 
-    const [completed, setCompleted] = useState([])
+    const [completed, setCompleted] = useState(() => {
+    const saved = localStorage.getItem(`completed-${id}`)
+    return saved ? JSON.parse(saved) : [] 
+    })
+
+    useEffect(() => {
+    localStorage.setItem(`tasks-${id}`, JSON.stringify(task))
+}, [task])
+
+useEffect(() => {
+    localStorage.setItem(`completed-${id}`, JSON.stringify(completed))
+}, [completed])
+
     
      const project = projects.find((proj) => proj.id === Number(id))
 
@@ -50,13 +66,22 @@ const handleComplete = function(index){
     console.log("Task Completed")
 }
 
+const taskCount = task.length + completed.length
+const percentageCount = taskCount === 0 ? 0 : 
+Math.round((completed.length / taskCount) * 100)
+
   return  <>
             <header>
             <img src="/icons/left_arrow_icon.png" 
             alt="Left arrow icon"
             title = 'Go back'
+            onClick = { ()=> navigate(-1)}
             />
+            <div className = 'detailsHeader'>
+
             <h3>{project.name}</h3>
+            <p> {percentageCount}%</p>
+            </div>
             </header>
 
             <main>

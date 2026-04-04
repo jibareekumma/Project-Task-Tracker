@@ -1,6 +1,7 @@
 import '../css/TaskAdd.css'
 // import dummyLoading from '../icons/dummy-loading.jpeg'
 import { useNavigate } from 'react-router-dom'
+import CircularProgress from './CircularProgress'
 
 
 
@@ -42,8 +43,7 @@ const percentageCount = totalCount === 0 ? 0 : Math.round((completed.length / to
             <p>{category}</p>
            
                     <div className = 'task-icons'>
-                    <span className ='circle-icons'>
-                    </span>
+                    <CircularProgress percentage={percentageCount} />
                     <p className = 'percentage-text'>
                         {percentageCount}%
                     </p>

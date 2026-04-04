@@ -38,6 +38,7 @@ const AllProjects = function() {
           name={proj.name}
           category={proj.category}
           index={index}
+          id = {proj.id}
           handleDel={handleDel}
         />
       ))}

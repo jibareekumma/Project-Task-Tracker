@@ -119,6 +119,9 @@ form button:hover {
   gap: 2rem;
 }
 .completedSection h3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
   letter-spacing: 0.5px;
   font-weight: 600;
   font-size: 1.5rem;
@@ -138,6 +141,8 @@ form button:hover {
   height: 4rem;
   border: none;
   width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
   padding-left: 1rem;
   border-radius: 5px;
   background-color: rgb(199, 199, 216);

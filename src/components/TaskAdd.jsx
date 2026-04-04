@@ -42,16 +42,6 @@ const TaskAdd = function () {
         setShowModal(false);
     };
 
-//     const handleCreate = function(project, category) {
-//     const newProject = {
-//         id: Date.now(),
-//         name: project,
-//         category: category,
-//         tasks: []
-        
-//     }
-//     setProjects((prev) => [...prev, newProject])
-// }
 
 
     return <>

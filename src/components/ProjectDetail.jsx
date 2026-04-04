@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { useContext, useState, useEffect } from 'react'
 import { ProjectContext } from '../context/ProjectContext'
 import '../css/ProjectDetails.css'
+import CircularProgress from './CircularProgress'
 
 
 
@@ -80,7 +81,7 @@ Math.round((completed.length / taskCount) * 100)
             <div className = 'detailsHeader'>
 
             <h3>{project.name}</h3>
-            <p> {percentageCount}%</p>
+           <CircularProgress percentage={percentageCount} />
             </div>
             </header>
 

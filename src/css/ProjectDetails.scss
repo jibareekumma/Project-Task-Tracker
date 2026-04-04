@@ -152,6 +152,9 @@ form{
     gap: 2rem;
 
         h3{
+        width: 100%;
+        display: flex;
+        justify-content: center;
         letter-spacing: 0.5px;
         font-weight: 600;
         font-size: 1.5rem;
@@ -172,6 +175,8 @@ form{
             height: 4rem;
             border: none;
             width: 80%;
+            margin-right: 10%;
+            margin-left: 10%;
             padding-left: 1rem;
             border-radius: 5px;
             background-color: $task-bg-hover;

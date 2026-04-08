@@ -9,6 +9,17 @@ $letter-spacing-small: 0.5px;
 $letter-spacing-big: 1px;
 $text-weight-big: 300;
 
+// New color design
+$bg-main: rgba(248, 249, 253, 1);
+$card-bg: rgba(255, 255, 255, 1);
+$text-bold: rgba(30, 39, 46, 1);
+$accent-btn: rgba(0, 196, 204, 1);
+
+// Dark Mode Variation
+$bg-main-d: rgba(21, 26, 35, 1);
+$card-bg-d: rgba(32, 41, 58, 1);
+$text-bold-d: rgba(241, 242, 246, 1);
+$accent-d: rgba(0, 229, 255, 1);
 
 
 .first-page-task-container{

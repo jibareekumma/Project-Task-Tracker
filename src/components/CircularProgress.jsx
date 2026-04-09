@@ -20,6 +20,7 @@ const CircularProgress = function( {percentage} ){
                 fill="none"
                 stroke="#e8e8f3"
                 strokeWidth="4"
+                color = "black"
             />
 
         <circle
@@ -27,9 +28,9 @@ const CircularProgress = function( {percentage} ){
                 cx="25"
                 cy="25"
                 r={radius}
-                fill="blue"
+                fill="transparent"
                 
-                stroke="#1d1a2e"
+                stroke="rgba(0, 196, 204, 1)"
                 strokeWidth="4"
                 strokeDasharray={circumference}
                 strokeDashoffset={offset}
@@ -47,9 +48,10 @@ const CircularProgress = function( {percentage} ){
                 textAnchor="middle"
                 dominantBaseline="central"
                 fontSize="12"
-                fill="white"
+                fill="#000000"
                 fontWeight="600"
                 color="black"
+                style={{ fill: '#000000' }}
             >
                 {percentage}%
             </text>

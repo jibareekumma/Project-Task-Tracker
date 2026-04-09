@@ -16,7 +16,8 @@ const EntireTask = function({ name, category, handleDel, index, id }) {
     const percentageCount = totalCount === 0 ? 0 : Math.round((completed.length / totalCount) * 100)
 
     return <>
-        <main>
+    
+           
             <div className='taskContainerM'>
                 <div className='heading'>
                     <div className='iconContainer'>
@@ -34,7 +35,7 @@ const EntireTask = function({ name, category, handleDel, index, id }) {
                         <p>{category}</p>
                     </div>
                     <div className='icons'>
-                        <img src="icons/trash-solid-full.svg"
+                        <img src="icons/red trash icon.png"
                         alt="Delete"
                         title='Delete Project'
                         onClick={() => handleDel(index)} />
@@ -46,7 +47,9 @@ const EntireTask = function({ name, category, handleDel, index, id }) {
                     </div>
                 </div>
             </div>
-        </main>
+
+           
+       
     </>
 }
 

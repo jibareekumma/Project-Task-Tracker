@@ -8,7 +8,7 @@
 }
 .first-page-task-container .addTask {
   width: 100%;
-  height: 10rem;
+  height: 13rem;
   border: 0.5px dashed rgb(51, 52, 56);
   border-radius: 15px;
   display: flex;
@@ -18,69 +18,64 @@
 }
 .first-page-task-container .addTask:hover {
   cursor: pointer;
-  transform: scale(1.1);
   background-color: rgb(208, 209, 214);
 }
 
 .singleTask {
+  background-color: rgb(224, 225, 226);
+  width: 98%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
-  width: 100%;
-  height: 10rem;
-  background-color: rgb(202, 202, 230);
-  border-radius: 5px;
+  gap: 0.5rem;
   border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 13rem;
+  margin-bottom: 2%;
   box-shadow: 1px 3px 10px rgb(211, 211, 223);
 }
-.singleTask img {
-  width: 30px;
-  height: 30px;
+.singleTask h5 {
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  word-spacing: 1.2px;
 }
-.singleTask img:hover {
-  cursor: pointer;
-}
-.singleTask .task-headers {
+.singleTask .percentage-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  width: 50%;
+  margin-left: 20%;
+  margin-left: 30%;
   align-items: center;
+  gap: 1rem;
 }
-.singleTask .task-footers {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.singleTask .percentage-container CircularProgress {
+  color: black;
 }
-.singleTask .task-footers .task-icons {
-  width: 30%;
+.singleTask .percentage-container p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: black;
+  letter-spacing: 1px;
+}
+.singleTask .category-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  width: 100%;
 }
-.singleTask .task-footers .task-icons .circle-icons {
-  width: 20px;
-  height: 20px;
-  border: 2px solid black;
-  border-radius: 50%;
-}
-.singleTask .task-footers .task-icons .percentage-text {
-  font-size: 1.7rem;
-  font-weight: 200;
-  color: blue;
-}
-.singleTask h5 {
-  letter-spacing: 0.5px;
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-.singleTask p {
+.singleTask .category-section p {
   font-size: 1.5rem;
   font-weight: 300;
-  font-style: italic;
-  letter-spacing: 0.5px;
+  color: rgb(55, 56, 58);
+}
+.singleTask img {
+  width: 25px;
+  height: 25px;
+}
+.singleTask img:hover {
+  cursor: pointer;
 }
 
 .toast {
@@ -140,27 +135,15 @@
   }
 }
 @media (min-width: 768px) {
-  .taskContainer {
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .taskContainer .addTask {
-    height: 10rem;
-    width: 30%;
-  }
-  .taskContainer .mainContainer {
-    height: 14rem;
-    width: 60%;
+  .first-page-task-container .addTask {
+    grid-column: span 2;
   }
 }
 @media (min-width: 1024px) {
-  .taskContainer {
-    gap: 2.5rem;
+  .first-page-task-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .taskContainer .addTask {
-    height: 14rem;
+  .first-page-task-container .addTask {
+    grid-column: span 1;
   }
 }/*# sourceMappingURL=TaskAdd.css.map */

@@ -10,8 +10,7 @@ $letter-spacing-big: 1px;
 $text-weight-big: 300;
 
 // New color design
-$bg-main: rgba(248, 249, 253, 1);
-$card-bg: rgba(255, 255, 255, 1);
+$card-bg: rgb(224, 225, 226);
 $text-bold: rgba(30, 39, 46, 1);
 $accent-btn: rgba(0, 196, 204, 1);
 
@@ -34,7 +33,7 @@ $accent-d: rgba(0, 229, 255, 1);
 
     .addTask{
         width: 100%;
-        height: 10rem;
+        height: 13rem;
         border: 0.5px dashed $medium-text;
         border-radius: 15px;
         display: flex;
@@ -44,159 +43,86 @@ $accent-d: rgba(0, 229, 255, 1);
 
         &:hover{
             cursor: pointer;
-            transform: scale(1.1);
+           
             background-color: rgb(208, 209, 214);
         }
     }
 }
 
-//     .singleTask{
-        
-//         width: 100%;
-//         padding: 1rem;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-//         height: 10rem;
-//         background-color: $task-bg;
-//         color: black;
-//         border-radius: 15px;
-//         border: 2px solid green;
-//         &:hover{
-//             cursor: pointer;
-//         }
-//         img{
-//             width: 25px;
-//             height: 25px;
-//         }
-
-//         .nameContainer{
-
-//             border: 2px solid green;
-//             display: flex;
-//             flex-direction: row;
-//             justify-content: space-between;
-            
-
-//              h5{
-//             font-size: 1.7rem;
-//             letter-spacing: 0.5px;
-//             font-weight: 700;
-
-//         }
-
-//         .icons{
-//             display: flex;
-//             flex-direction: row;
-//             // border: 2px solid green;
-//             width: 25%;
-//             justify-content: space-between;
-
-
-//         }
-//     }
-
-       
-
-//         .percentageSec{
-//             display: flex;
-//             flex-direction: row;
-//             justify-content: space-between;
-//             margin-bottom: 0rem;
-//             // border: 1px solid black;
-//             height: auto;
-//             align-items: center;
-
-//             h6{
-//                 font-weight: $text-weight-big;
-//                 font-size: 1.5rem;
-//                 letter-spacing: $letter-spacing-small;
-//             }
-//             p{
-//                 font-weight: 500;
-//                 font-size: 1.4rem;
-//                 font-style: italic;
-//             }
-//         }
-//         img{
-//             width: 100%;
-//             height: auto;
-//             // border: 2px solid green;
-//         }
-//     }
-// }
 
 
 .singleTask{
+
+    background-color: $card-bg;
+    width: 98%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    width: 100%;
-    height: 10rem;
-    background-color: $task-bg;
-    border-radius: 5px;
+    gap: 0.5rem;
     border: none;
-    box-shadow: 1px 3px 10px rgb(211, 211, 223);
+    padding: 1rem;
+    border-radius: 10px;
+    height: 13rem;
+    margin-bottom: 2%;
+    box-shadow: 1px 3px 10px rgb(211, 211, 223);;
+
+    h5{
+        font-weight: 700;
+        font-size: 1.7rem;
+        letter-spacing: $letter-spacing-big;
+        word-spacing: 1.2px; 
+    }
+
+    .percentage-container{
+        // border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin-left: 20%;
+        margin-left: 30%;
+        align-items: center;
+        gap: 1rem;
+        
+
+        CircularProgress{
+            color: black;
+        }
+
+        p{
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: black;
+            letter-spacing: 1px;
+        }
+
+    }
+
+    .category-section{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+
+        p{
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: rgb(55, 56, 58);
+        }
+    }
+
+
     img{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
 
         &:hover{
             cursor: pointer;
         }
     }
 
-    .task-headers{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .task-footers{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        .task-icons{
-            width: 30%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-end;
-
-            .circle-icons{
-                width: 20px;
-                height: 20px;
-                border: 2px solid black;
-                border-radius: 50%;
-            }
-            .percentage-text{
-                font-size: 1.7rem;
-                font-weight: 200;
-                color: blue;
-            }
-
-        }
+     
     }
     
-
-        h5{
-            letter-spacing: $letter-spacing-small;
-            font-size: 1.7rem;
-            font-weight: 600;
-        }
-
-        p{
-            font-size: 1.5rem;
-            font-weight: 300;
-            font-style: italic;
-            letter-spacing: $letter-spacing-small;
-
-        }
-    }
 
     
 
@@ -260,33 +186,25 @@ $accent-d: rgba(0, 229, 255, 1);
 
 
 @media (min-width: 768px){
-    .taskContainer{
-        gap: 2rem;
-        display: flex;
-        flex-direction: column;
-        margin-left: 20%;
-        margin-right: 20%;
+
+    .first-page-task-container{
+      
         .addTask{
-            height: 10rem;
-            width: 30%;
+            grid-column: span 2;
         }
-        .mainContainer{
-            height: 14rem;
-            width: 60%;
         }
-
-
-    }
+        
 }
 
+
+    
+
 @media (min-width: 1024px){
-    .taskContainer{
-        gap: 2.5rem;
-
+    
+     .first-page-task-container{
+        grid-template-columns: 1fr 1fr 1fr;
         .addTask{
-            height: 14rem;
+            grid-column: span 1;
         }
-
-
-    }   
+        }
 }

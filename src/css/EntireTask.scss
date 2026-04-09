@@ -10,6 +10,17 @@ $letter-spacing-big: 1px;
 $text-weight-small: 300;
 
 
+// New color design
+$card-bg: rgb(224, 225, 226);
+$text-bold: rgba(30, 39, 46, 1);
+$accent-btn: rgba(0, 196, 204, 1);
+
+// Dark Mode Variation
+$bg-main-d: rgba(21, 26, 35, 1);
+$card-bg-d: rgba(32, 41, 58, 1);
+$text-bold-d: rgba(241, 242, 246, 1);
+$accent-d: rgba(0, 229, 255, 1);
+
 .headers{
     // border: 2px solid black;
     display: flex;
@@ -47,7 +58,7 @@ $text-weight-small: 300;
             align-items: center;
             border-radius: 5px;
             color: white;
-            background-color: black;
+            background-color: $accent-btn;
             font-size: 1.2rem;
             border: none;
             letter-spacing: 0.5px;
@@ -65,16 +76,19 @@ $text-weight-small: 300;
 main{
     display: flex;
     flex-direction: column;
-    gap: 5rem ;
+    gap: 2rem ;
     // border: 2px solid green;
 }
 
 .taskContainerM{
     border: none;
     background-color: $task-bg;
-    padding: 1rem;
-    margin-bottom: 1rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 15px;
+    // border: 2px solid green;
     &:hover{
         cursor: pointer;
     }
@@ -85,7 +99,7 @@ main{
         flex-direction: row;
         gap: 0.3rem;
         align-items: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.5rem;
         justify-content: space-between;
 
         .iconContainer{
@@ -170,14 +184,22 @@ main{
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     
-
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+       
+    }
     .taskContainerM{
-        width: 70%;
+        width: 100%;
         height: 12rem;
-        margin-right: 15%;
-        margin-left: 15%;
+        
+    }
+    .seeAllBtn{
+        width: 10rem;
+        font-size: 1.5rem;
     }
    
 }
@@ -231,7 +253,7 @@ main{
             align-items: center;
             border-radius: 5px;
             color: white;
-            background-color: black;
+            background-color: $accent-btn;
             font-size: 1rem;
             border: none;
             letter-spacing: 0.5px;

@@ -51,7 +51,7 @@ const TaskAdd = function () {
 
         <div className="first-page-task-container">
 
-            {projects.slice(0, 5).map( (proj, index) => (
+            {projects.slice(0, 6).map( (proj, index) => (
                      <SingleTask 
                      key = {index}
                      name = {proj.name}
@@ -70,7 +70,7 @@ const TaskAdd = function () {
         
 
             {
-                projects.slice(0, 3).map( (proj, index) => (
+                projects.slice(0, 4).map( (proj, index) => (
                     <EntireTask 
                     key = {index}
                      name = {proj.name}

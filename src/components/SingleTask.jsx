@@ -24,10 +24,24 @@ const percentageCount = totalCount === 0 ? 0 : Math.round((completed.length / to
             
         <div className='singleTask' 
             onClick={() => navigate(`/project/${id}`)}>
-               <div className = 'task-headers'>
+               
             <h5>{name}</h5>
+           
 
-             <img src="/icons/trash-solid-full.svg"
+            <div className = 'percentage-container'>
+
+                    <CircularProgress percentage={percentageCount} />
+                    <p className = 'percentage-text'>
+                        {percentageCount}%
+                    </p>
+
+            </div>
+
+            <div className = 'category-section'>
+
+             <p>{category}</p>
+
+             <img src="/icons/red trash icon.png"
             alt="Delete"
             className = 'trash-icon'
             onClick={(e) => {
@@ -35,22 +49,12 @@ const percentageCount = totalCount === 0 ? 0 : Math.round((completed.length / to
                 handleDel(index)
             }}
             />
-            </div>
+                </div>
 
 
-            <div className = 'task-footers'>
-
-            <p>{category}</p>
-           
-                    <div className = 'task-icons'>
-                    <CircularProgress percentage={percentageCount} />
-                    <p className = 'percentage-text'>
-                        {percentageCount}%
-                    </p>
-                    </div>
-            </div>
 
             </div>
+
 
     </>
 }

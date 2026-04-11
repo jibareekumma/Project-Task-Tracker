@@ -42,10 +42,22 @@ const handleCreate = function(project, category) {
     setProjects((prev) => [...prev, newProject])
 }
 
+const editProjectName = function(id, newName) {
+    setProjects((prev) => prev.map((proj) => {
+        if (proj.id === id) {
+            return {
+                ...proj,        
+                name: newName   
+            }
+        }
+        return proj
+    }))
+}
+
     return (
         <>
         <ProjectContext.Provider value={{ projects, setProjects, handleDel, 
-        cancelAll, handleCreate }}>
+        cancelAll, handleCreate, editProjectName }}>
       {children}
       
     </ProjectContext.Provider>

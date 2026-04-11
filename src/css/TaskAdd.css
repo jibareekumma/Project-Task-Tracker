@@ -34,6 +34,23 @@
   margin-bottom: 2%;
   box-shadow: 1px 3px 10px rgb(211, 211, 223);
 }
+.singleTask .single-task-headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.singleTask .single-task-headers h5 {
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  word-spacing: 1.2px;
+}
+.singleTask .single-task-headers .pencil-icon {
+  filter: invert(67%) sepia(98%) saturate(364%) hue-rotate(140deg) brightness(95%) contrast(101%);
+}
+.singleTask .single-task-headers .pencil-icon:hover {
+  filter: brightness(0.2);
+}
 .singleTask h5 {
   font-weight: 700;
   font-size: 1.7rem;

@@ -65,6 +65,36 @@ $accent-d: rgba(0, 229, 255, 1);
     margin-bottom: 2%;
     box-shadow: 1px 3px 10px rgb(211, 211, 223);;
 
+
+    .single-task-headers{
+
+        // border: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        h5{
+        font-weight: 700;
+        font-size: 1.7rem;
+        letter-spacing: $letter-spacing-big;
+        word-spacing: 1.2px; 
+    }
+
+    .pencil-icon{
+
+        filter: invert(67%) sepia(98%) 
+        saturate(364%) hue-rotate(140deg) 
+        brightness(95%) contrast(101%);
+
+        &:hover{
+            filter: brightness(0.2);;
+        }
+    }
+
+
+    }
+
+
     h5{
         font-weight: 700;
         font-size: 1.7rem;

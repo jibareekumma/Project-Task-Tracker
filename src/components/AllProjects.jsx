@@ -4,6 +4,8 @@ import EntireTask from './EntireTask'
 import { useContext } from 'react'
 import {ProjectContext} from '../context/ProjectContext'
 import { useNavigate } from 'react-router-dom'
+import SearchFeature from './SearchFeature'
+import PercentageSort from '../utilities/PercentageSort'
 
 const AllProjects = function() {
 
@@ -31,17 +33,21 @@ const AllProjects = function() {
       <button onClick = {cancelAll}>Clear All</button>
       </div>
 
+    <SearchFeature />
       <div className = 'mainContainerMM'>
-      {projects.map((proj, index) => (
+      {[...projects]
+    .sort((a, b) => PercentageSort(b.id) - PercentageSort(a.id))
+    .map((proj, index) => (
         <EntireTask
-          key={index}
-          name={proj.name}
-          category={proj.category}
-          index={index}
-          id = {proj.id}
-          handleDel={handleDel}
+            key={index}
+            name={proj.name}
+            category={proj.category}
+            index={index}
+            id={proj.id}
+            handleDel={handleDel}
         />
-      ))}
+    ))
+}
       </div>
     </main>
   )

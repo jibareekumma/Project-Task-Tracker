@@ -3,11 +3,18 @@ import "../css/Header.css"
 
 const Header = function( {cancelAll} ){
 
+    const today = new Date().toLocaleDateString('en-US', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long'
+    
+})
+
     return <header className = "first-page-header">
         <div className = "upper-div">
             <div className = "header-text">
                 <h4>Good Morning, User</h4>
-                <p>Saturday, 14 march</p>
+                <p>{today}</p>
             </div>
             <button className = "clear-btn" 
                 onClick = {cancelAll}

@@ -9,6 +9,7 @@ import RecentHeader from './RecentHeader';
 import { useContext } from 'react';
 import { ProjectContext } from '../context/ProjectContext';
 import SearchFeature from './SearchFeature';
+import PercentageSort from '../utilities/PercentageSort'
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
@@ -50,10 +51,11 @@ const TaskAdd = function () {
     <Header cancelAll = {cancelAll} />
 
     <SearchFeature />
-    
+
         <div className="first-page-task-container">
 
-            {projects.slice(0, 6).map( (proj, index) => (
+            { [...projects].sort((a, b) => PercentageSort(b.id) - PercentageSort(a.id))
+            .slice(0, 6).map( (proj, index) => (
                      <SingleTask 
                      key = {index}
                      name = {proj.name}
@@ -71,18 +73,20 @@ const TaskAdd = function () {
         <RecentHeader />
         
 
-            {
-                projects.slice(0, 4).map( (proj, index) => (
-                    <EntireTask 
-                    key = {index}
-                     name = {proj.name}
-                     category = {proj.category}
-                     index = {index}
-                     id = {proj.id}
-                     handleDel = {handleDel}
-                    />
-                )
-            ) }
+           {[...projects]
+    .sort((a, b) => PercentageSort(b.id) - PercentageSort(a.id))
+    .slice(0, 4)
+    .map((proj, index) => (
+        <EntireTask
+            key={index}
+            name={proj.name}
+            category={proj.category}
+            index={index}
+            id={proj.id}
+            handleDel={handleDel}
+        />
+    ))
+}
         
 
         <div className="modalWindow" style={{ display: showModal ? 'flex' : 'none' }}>

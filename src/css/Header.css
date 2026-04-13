@@ -43,6 +43,7 @@
   border: none;
   margin-top: 0.5rem;
   letter-spacing: 0.5px;
+  font-family: crimsonn;
 }
 .upper-div button:hover {
   cursor: pointer;

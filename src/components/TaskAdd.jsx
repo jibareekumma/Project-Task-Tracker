@@ -8,6 +8,7 @@ import EntireTask from './EntireTask';
 import RecentHeader from './RecentHeader';
 import { useContext } from 'react';
 import { ProjectContext } from '../context/ProjectContext';
+import SearchFeature from './SearchFeature';
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
@@ -48,7 +49,8 @@ const TaskAdd = function () {
 
     <Header cancelAll = {cancelAll} />
 
-
+    <SearchFeature />
+    
         <div className="first-page-task-container">
 
             {projects.slice(0, 6).map( (proj, index) => (

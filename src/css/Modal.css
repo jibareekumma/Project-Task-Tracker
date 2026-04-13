@@ -14,6 +14,7 @@
   transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: auto;
+  font-family: crimsonn;
 }
 .modalWindow .headerContainer {
   display: flex;
@@ -43,6 +44,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
   border: 0.3px groove rgb(89, 89, 92);
+  font-family: crimsonn;
 }
 .modalWindow form button {
   background-color: black;
@@ -51,6 +53,7 @@
   font-weight: 600;
   font-size: 1.2rem;
   border: none;
+  font-family: crimsonn;
 }
 .modalWindow form button:hover {
   cursor: pointer;

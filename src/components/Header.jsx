@@ -1,5 +1,7 @@
 // import "../css/Header"
 import "../css/Header.css"
+import "../css/DarkMode.css"
+import DarkMode from "./DarkMode"
 
 const Header = function( {cancelAll} ){
 
@@ -28,6 +30,7 @@ const Header = function( {cancelAll} ){
                 <br />
                 <span>    Great today! </span>
             </h3>
+           <DarkMode />
             </div>
     </header>
 }

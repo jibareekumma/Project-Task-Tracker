@@ -54,10 +54,32 @@ const editProjectName = function(id, newName) {
     }))
 }
 
+const [isDark, setIsDark] = useState(() => {
+    const saved = localStorage.getItem('darkMode')
+    return saved === 'true'  
+})
+
+const toggleDark = function() {
+    setIsDark((prev) => {
+        localStorage.setItem('darkMode', !prev)
+        return !prev
+    })
+}
+
+    useEffect(() => {
+    if (isDark) {
+        document.body.classList.add('dark')
+    } else {
+        document.body.classList.remove('dark')
+    }
+}, [isDark])
+
+
     return (
         <>
         <ProjectContext.Provider value={{ projects, setProjects, handleDel, 
-        cancelAll, handleCreate, editProjectName }}>
+        cancelAll, handleCreate, editProjectName, isDark, toggleDark
+}} >
       {children}
       
     </ProjectContext.Provider>

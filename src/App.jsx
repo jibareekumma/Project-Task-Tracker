@@ -5,7 +5,7 @@ import TaskAdd from "./components/TaskAdd"
 import { useState } from "react"
 import AllProjects from "./components/AllProjects"
 import ProjectDetail from './components/ProjectDetail'
-
+import "./css/DarkMode.css"
 
 
 function App() {

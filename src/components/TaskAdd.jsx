@@ -13,7 +13,7 @@ import PercentageSort from '../utilities/PercentageSort'
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
-    const { projects, setProjects, handleDel, cancelAll, handleCreate }
+    const { projects, isDark, setProjects, handleDel, cancelAll, handleCreate }
     = useContext(ProjectContext)
     const [project, setProject] = useState('') 
     const [category, setCategory] = useState('')
@@ -44,9 +44,12 @@ const TaskAdd = function () {
         setShowModal(false);
     };
 
+    
 
 
     return <>
+
+    <div className={isDark ? 'dark' : ''}></div>
 
     <Header cancelAll = {cancelAll} />
 

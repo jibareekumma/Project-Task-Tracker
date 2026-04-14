@@ -1,5 +1,5 @@
 
-
+import '../css/DarkMode'
 const CircularProgress = function( {percentage} ){
 
     const radius = 20
@@ -42,7 +42,7 @@ const CircularProgress = function( {percentage} ){
                 }}
             />
 
-            <text
+            <text className = 'circular-text'
                 x="25"
                 y="25"
                 textAnchor="middle"

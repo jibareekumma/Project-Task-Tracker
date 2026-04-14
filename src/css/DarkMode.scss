@@ -1,0 +1,103 @@
+
+
+$main-bg: rgba(15, 18, 27, 1);
+$project-card: rgba(26, 32, 46, 1);
+$modal-container: rgba(22, 28, 40, 1);
+$text-main: rgba(225, 228, 235, 1);
+$text-secondary: rgba(148, 155, 170, 1);
+
+$btn-color: rgba(0, 210, 220, 1);
+$btn-hover: rgba(0, 245, 255, 1);
+$btn-text: rgba(10, 10, 15, 1);
+
+$modal-btn:  rgba(0, 210, 220, 1);
+$modal-btn-hover: rgba(0, 245, 255, 1);
+
+$bin-icon: rgba(255, 75, 75, 1);
+
+$card-border: rgba(255, 255, 255, 0.06);
+$card-shadow:  rgba(0, 0, 0, 0.4);
+$input-bg: rgba(32, 40, 58, 1);
+$input-border: rgba(255, 255, 255, 0.1);
+$accent-glow:  rgba(0, 210, 220, 0.15);
+
+
+
+body.dark{
+
+    background-color: $main-bg;
+    color: $text-main;
+
+    Header{
+       .header-text{
+        h4{
+            color: $text-main;
+        }
+        p{
+            color: $text-main;
+        }
+       }
+
+       .greeting-text{
+        span{
+            color: $text-main;
+        }
+       }
+
+       .upper-div{
+        button{
+            background-color: $btn-color;
+            color: $btn-text;
+            &:hover{
+                background-color: $btn-hover;
+            }
+        }
+       }
+    }
+
+
+    SearchFeature{
+        .search-wrapper{
+            border: 5px solid white;
+            input{
+                background-color: red;
+            }
+        }
+    }
+
+    .addTask{
+        border: $btn-color 1px dashed;
+    }
+
+    .singleTask{
+        background-color: $project-card;
+        color: $text-secondary;
+        box-shadow: none;
+        border: $card-border 2px solid;
+
+        .pencil-icon{
+            filter: invert(74%) sepia(69%) saturate(512%) 
+                    hue-rotate(135deg) brightness(95%) 
+                    contrast(95%);
+                    &:hover{
+                        
+                    filter: invert(84%) sepia(89%) saturate(650%) 
+                            hue-rotate(135deg) brightness(105%) 
+                            contrast(100%);
+                            }
+                    }
+
+        .category-section{
+            p{color: $text-secondary;}
+
+            .trash-icon{
+                filter: invert(44%) sepia(91%) saturate(748%) 
+                hue-rotate(330deg) brightness(101%) 
+                contrast(101%);
+            }
+        }
+        
+    }
+
+
+}

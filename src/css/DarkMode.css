@@ -1,0 +1,47 @@
+body.dark {
+  background-color: rgb(15, 18, 27);
+  color: rgb(225, 228, 235);
+}
+body.dark Header .header-text h4 {
+  color: rgb(225, 228, 235);
+}
+body.dark Header .header-text p {
+  color: rgb(225, 228, 235);
+}
+body.dark Header .greeting-text span {
+  color: rgb(225, 228, 235);
+}
+body.dark Header .upper-div button {
+  background-color: rgb(0, 210, 220);
+  color: rgb(10, 10, 15);
+}
+body.dark Header .upper-div button:hover {
+  background-color: rgb(0, 245, 255);
+}
+body.dark SearchFeature .search-wrapper {
+  border: 5px solid white;
+}
+body.dark SearchFeature .search-wrapper input {
+  background-color: red;
+}
+body.dark .addTask {
+  border: rgb(0, 210, 220) 1px dashed;
+}
+body.dark .singleTask {
+  background-color: rgb(26, 32, 46);
+  color: rgb(148, 155, 170);
+  box-shadow: none;
+  border: rgba(255, 255, 255, 0.06) 2px solid;
+}
+body.dark .singleTask .pencil-icon {
+  filter: invert(74%) sepia(69%) saturate(512%) hue-rotate(135deg) brightness(95%) contrast(95%);
+}
+body.dark .singleTask .pencil-icon:hover {
+  filter: invert(84%) sepia(89%) saturate(650%) hue-rotate(135deg) brightness(105%) contrast(100%);
+}
+body.dark .singleTask .category-section p {
+  color: rgb(148, 155, 170);
+}
+body.dark .singleTask .category-section .trash-icon {
+  filter: invert(44%) sepia(91%) saturate(748%) hue-rotate(330deg) brightness(101%) contrast(101%);
+}/*# sourceMappingURL=DarkMode.css.map */

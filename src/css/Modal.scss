@@ -14,7 +14,8 @@ $light-text: rgb(89, 89, 92);
     display: none;
     flex-direction: column;
     gap: 3rem;
-    background-color: white;
+    // background-color: white;
+    background-color: rgba(22, 28, 40, 1);
     border-radius: 5px;
     position: fixed;
     top: 50%;
@@ -22,6 +23,7 @@ $light-text: rgb(89, 89, 92);
     transform: translate(-50%, -50%);
     z-index: 999;
     pointer-events: auto;
+    color: rgba(148, 155, 170, 1);
     font-family: crimsonn;
     
 

@@ -23,6 +23,7 @@
 
 .singleTask {
   background-color: rgb(224, 225, 226);
+  color: black;
   width: 98%;
   display: flex;
   flex-direction: column;

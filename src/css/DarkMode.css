@@ -21,11 +21,14 @@ body.dark Header .upper-div button:hover {
 body.dark SearchFeature .search-wrapper {
   border: 5px solid white;
 }
-body.dark SearchFeature .search-wrapper input {
+body.dark SearchFeature .search-wrapper input, body.dark SearchFeature .search-wrapper .modalWindow form select, body.dark .modalWindow form SearchFeature .search-wrapper select {
   background-color: red;
 }
 body.dark .addTask {
   border: rgb(0, 210, 220) 1px dashed;
+}
+body.dark .addTask:hover {
+  background-color: rgb(26, 32, 46);
 }
 body.dark .singleTask {
   background-color: rgb(26, 32, 46);
@@ -44,4 +47,61 @@ body.dark .singleTask .category-section p {
 }
 body.dark .singleTask .category-section .trash-icon {
   filter: invert(44%) sepia(91%) saturate(748%) hue-rotate(330deg) brightness(101%) contrast(101%);
+}
+body.dark .RecentHeader h5 {
+  color: rgb(225, 228, 235);
+}
+body.dark .RecentHeader .seeAllBtn {
+  background-color: rgb(0, 210, 220);
+  color: rgb(10, 10, 15);
+}
+body.dark .RecentHeader .seeAllBtn:hover {
+  background-color: rgb(0, 245, 255);
+}
+body.dark .taskContainerM {
+  background-color: rgb(26, 32, 46);
+}
+body.dark .taskContainerM .iconContainer span {
+  background-color: rgb(0, 210, 220);
+}
+body.dark .taskContainerM .iconContainer h6 {
+  color: rgb(148, 155, 170);
+}
+body.dark .taskContainerM .details .texts h5 {
+  color: rgb(225, 228, 235);
+}
+body.dark .taskContainerM .details .texts p {
+  color: rgb(148, 155, 170);
+}
+body.dark .taskContainerM .details .icons .trash-icon {
+  filter: invert(44%) sepia(91%) saturate(748%) hue-rotate(330deg) brightness(101%) contrast(101%);
+}
+body.dark .taskContainerM .details .icons .navigate-icon {
+  filter: invert(74%) sepia(69%) saturate(512%) hue-rotate(135deg) brightness(95%) contrast(95%);
+}
+body.dark .taskContainerM .details .icons .navigate-icon:hover {
+  filter: invert(84%) sepia(89%) saturate(650%) hue-rotate(135deg) brightness(105%) contrast(100%);
+}
+body.dark .modalWindow {
+  background-color: rgb(22, 28, 40);
+}
+body.dark .modalWindow .headerContainer h3 {
+  color: rgb(225, 228, 235);
+}
+body.dark .modalWindow .headerContainer .btnClose {
+  filter: invert(74%) sepia(69%) saturate(512%) hue-rotate(135deg) brightness(95%) contrast(95%);
+}
+body.dark .modalWindow .headerContainer .btnClose:hover {
+  filter: invert(84%) sepia(89%) saturate(650%) hue-rotate(135deg) brightness(105%) contrast(100%);
+}
+body.dark .modalWindow form input, body.dark .modalWindow form select {
+  background-color: rgb(32, 40, 58);
+  color: rgb(148, 155, 170);
+}
+body.dark .modalWindow form button {
+  background-color: rgb(0, 210, 220);
+  color: rgb(225, 228, 235);
+}
+body.dark .modalWindow form button:hover {
+  background-color: rgb(0, 245, 255);
 }/*# sourceMappingURL=DarkMode.css.map */

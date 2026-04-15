@@ -35,12 +35,16 @@ const EntireTask = function({ name, category, handleDel, index, id }) {
                         <p>{category}</p>
                     </div>
                     <div className='icons'>
-                        <img src="icons/red trash icon.png"
+                        <img 
+                        className = 'trash-icon'
+                        src="icons/red trash icon.png"
                         alt="Delete"
                         title='Delete Project'
                         onClick={() => handleDel(index)} />
 
-                        <img src="icons/open page icon.png"
+                        <img 
+                        className = 'navigate-icon'
+                        src="icons/open page icon.png"
                         alt="Open Page Icon"
                         title='Open project'
                         onClick={() => navigate(`/project/${id}`)} />

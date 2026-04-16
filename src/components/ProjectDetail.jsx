@@ -72,20 +72,22 @@ const percentageCount = taskCount === 0 ? 0 :
 Math.round((completed.length / taskCount) * 100)
 
   return  <>
+        <section className = 'project-details'>
             <header>
             <img src="/icons/left_arrow_icon.png" 
             alt="Left arrow icon"
             title = 'Go back'
             onClick = { ()=> navigate(-1)}
+            className = 'back-arrow'
             />
             <div className = 'detailsHeader'>
 
-            <h3>{project.name}</h3>
+            <h3 className = 'header-text'>{project.name}</h3>
            <CircularProgress percentage={percentageCount} />
             </div>
             </header>
 
-            <main>
+            <main className = 'task-form'>
             <form onSubmit = {(e) => e.preventDefault()}>
                 <input type="text" 
                 placeholder = 'Enter your task'
@@ -147,7 +149,10 @@ Math.round((completed.length / taskCount) * 100)
         </section>
 
         </main>
+
+        </section>
   </>
+    
 }
 
 export default ProjectDetail

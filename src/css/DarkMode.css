@@ -104,4 +104,49 @@ body.dark .modalWindow form button {
 }
 body.dark .modalWindow form button:hover {
   background-color: rgb(0, 245, 255);
+}
+body.dark .allProjects .headers span {
+  background-color: rgb(0, 210, 220);
+}
+body.dark .allProjects .headers span:hover {
+  background-color: rgb(0, 245, 255);
+}
+body.dark .allProjects .headers button {
+  background-color: rgb(0, 210, 220);
+  color: rgb(10, 10, 15);
+}
+body.dark .allProjects .headers button:hover {
+  background-color: rgb(0, 245, 255);
+}
+body.dark .project-details .back-arrow {
+  filter: invert(74%) sepia(69%) saturate(512%) hue-rotate(135deg) brightness(95%) contrast(95%);
+}
+body.dark .project-details .back-arrow:hover {
+  filter: invert(84%) sepia(89%) saturate(650%) hue-rotate(135deg) brightness(105%) contrast(100%);
+}
+body.dark .project-details h3 {
+  color: rgb(225, 228, 235);
+}
+body.dark .project-details form input, body.dark .project-details .modalWindow form select, body.dark .modalWindow .project-details form select {
+  color: black;
+  font-weight: 600;
+}
+body.dark .project-details form button {
+  background-color: rgb(0, 210, 220);
+  color: rgb(10, 10, 15);
+}
+body.dark .project-details form button:hover {
+  background-color: rgb(0, 245, 255);
+}
+body.dark .project-details .taskContainer {
+  color: black;
+}
+body.dark .project-details .taskContainer h5 {
+  color: rgb(225, 228, 235);
+}
+body.dark .project-details .completedSection h3 {
+  color: rgb(225, 228, 235);
+}
+body.dark .project-details .completedSection .completedContainer {
+  color: black;
 }/*# sourceMappingURL=DarkMode.css.map */

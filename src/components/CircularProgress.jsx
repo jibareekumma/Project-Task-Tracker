@@ -1,5 +1,9 @@
 
 import '../css/DarkMode.css'
+
+
+
+
 const CircularProgress = function( {percentage} ){
 
     const radius = 20

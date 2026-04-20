@@ -6,7 +6,7 @@ import { useState } from "react"
 import AllProjects from "./components/AllProjects"
 import ProjectDetail from './components/ProjectDetail'
 import "./css/DarkMode.css"
-
+import Home from "./components/Home"
 
 function App() {
 
@@ -21,11 +21,16 @@ function App() {
        <Routes>
 
       <Route path="/" element={<TaskAdd />} />
+
       <Route path="/all-projects" element={<AllProjects
       />} />
-     <Route path = "/project/:id" element = {<ProjectDetail/>}>
-      </Route>
-    
+
+     <Route path = "/project/:id" element = {<ProjectDetail/>}/>
+     
+
+        <Route path = "home-page" element = {<Home/>} />
+
+
     </Routes>
 
 

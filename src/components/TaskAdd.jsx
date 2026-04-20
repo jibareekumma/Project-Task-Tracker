@@ -11,6 +11,7 @@ import { useContext } from 'react';
 import { ProjectContext } from '../context/ProjectContext';
 import SearchFeature from './SearchFeature';
 import PercentageSort from '../utilities/PercentageSort'
+import { useNavigate } from 'react-router-dom';
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
@@ -45,7 +46,7 @@ const TaskAdd = function () {
         setShowModal(false);
     };
 
-    
+    const navigate = useNavigate();
 
 
     return <>
@@ -160,6 +161,9 @@ const TaskAdd = function () {
         onClick = { () => setShowToast(false)}
         >
         </div>
+
+        <button onClick = { () => navigate("/home-page")}
+        >Home Page</button>
     </>
 }
 

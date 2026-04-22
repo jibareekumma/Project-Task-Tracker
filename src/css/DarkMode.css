@@ -149,4 +149,11 @@ body.dark .project-details .completedSection h3 {
 }
 body.dark .project-details .completedSection .completedContainer {
   color: black;
+}
+body.dark .circular-text {
+  fill: white;
+}
+body.dark .percentage-text {
+  color: white;
+  font-weight: 700;
 }/*# sourceMappingURL=DarkMode.css.map */

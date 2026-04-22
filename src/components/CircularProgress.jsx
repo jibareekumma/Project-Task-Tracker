@@ -52,10 +52,7 @@ const CircularProgress = function( {percentage} ){
                 textAnchor="middle"
                 dominantBaseline="central"
                 fontSize="12"
-                fill="#000000"
                 fontWeight="600"
-                color="black"
-                style={{ fill: '#000000' }}
             >
                 {percentage}%
             </text>

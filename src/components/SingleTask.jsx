@@ -79,6 +79,7 @@ const handleEdit = function(e) {
             <div className = 'percentage-container'>
 
                     <CircularProgress percentage={percentageCount} />
+                    
                     <p className = 'percentage-text'>
                         {percentageCount}%
                     </p>

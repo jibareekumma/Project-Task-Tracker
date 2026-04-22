@@ -7,6 +7,7 @@ import AllProjects from "./components/AllProjects"
 import ProjectDetail from './components/ProjectDetail'
 import "./css/DarkMode.css"
 import Home from "./components/Home"
+import Register from "./components/Register"
 
 function App() {
 
@@ -30,6 +31,9 @@ function App() {
 
         <Route path = "home-page" element = {<Home/>} />
 
+        <Route path = "register" element = {<Register/>} />
+
+        
 
     </Routes>
 

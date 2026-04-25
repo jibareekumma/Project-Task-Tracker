@@ -13,6 +13,7 @@ import SearchFeature from './SearchFeature';
 import PercentageSort from '../utilities/PercentageSort'
 import { useNavigate } from 'react-router-dom';
 import { doSignOut } from '../config/auth.js'
+import Introduction from './Introduction.jsx';
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
@@ -57,6 +58,8 @@ const TaskAdd = function () {
     <Header cancelAll = {cancelAll} />
 
     <SearchFeature />
+
+    <Introduction />
 
         <div className="first-page-task-container">
 

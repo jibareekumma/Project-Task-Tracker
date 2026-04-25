@@ -271,4 +271,26 @@ body.dark{
         font-weight: 700;
     }
 
+    #bitmoji-container{
+    
+        .bitmoji-container{
+            color: $text-secondary;
+            background-color: $project-card;
+
+            .emoji{
+                background-color: $main-bg;
+            }
+            .emoji-texts{
+                h3{
+                    color: $text-main;
+
+                }
+                p{
+                    color: $text-secondary;
+                }
+            }
+        }
+    }
+
 }
+

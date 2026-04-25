@@ -28,6 +28,7 @@ $accent-d: rgba(0, 229, 255, 1);
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+    padding: 1rem;
 
     h5{
         font-size: 1.7rem;
@@ -77,6 +78,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 2rem ;
+    padding: 1rem;
     // border: 2px solid green;
 }
 
@@ -88,6 +90,7 @@ main{
     padding-right: 1rem;
     margin-bottom: 0.5rem;
     border-radius: 15px;
+    margin: 1rem;
     // border: 2px solid green;
     &:hover{
         cursor: pointer;

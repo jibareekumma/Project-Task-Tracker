@@ -156,4 +156,17 @@ body.dark .circular-text {
 body.dark .percentage-text {
   color: white;
   font-weight: 700;
+}
+body.dark #bitmoji-container .bitmoji-container {
+  color: rgb(148, 155, 170);
+  background-color: rgb(26, 32, 46);
+}
+body.dark #bitmoji-container .bitmoji-container .emoji {
+  background-color: rgb(15, 18, 27);
+}
+body.dark #bitmoji-container .bitmoji-container .emoji-texts h3 {
+  color: rgb(225, 228, 235);
+}
+body.dark #bitmoji-container .bitmoji-container .emoji-texts p {
+  color: rgb(148, 155, 170);
 }/*# sourceMappingURL=DarkMode.css.map */

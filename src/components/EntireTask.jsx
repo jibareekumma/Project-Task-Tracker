@@ -40,7 +40,7 @@ const EntireTask = function({ name, category, handleDel, index, id }) {
                         src="icons/red trash icon.png"
                         alt="Delete"
                         title='Delete Project'
-                        onClick={() => handleDel(index)} />
+                        onClick={() => handleDel(id)} />
 
                         <img 
                         className = 'navigate-icon'

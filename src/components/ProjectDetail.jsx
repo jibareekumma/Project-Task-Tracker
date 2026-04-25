@@ -116,7 +116,7 @@ Math.round((completed.length / taskCount) * 100)
                     <img src="/icons/trash-solid-full.svg" 
                     alt="Delete icon"
                     title = 'Delete Task' 
-                    onClick = {() => handleTaskDel(index)}
+                    onClick = {() => handleTaskDel(id)}
                     />
                 </div> 
                 ) }

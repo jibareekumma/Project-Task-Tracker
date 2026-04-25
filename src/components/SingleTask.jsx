@@ -95,7 +95,7 @@ const handleEdit = function(e) {
             className = 'trash-icon'
             onClick={(e) => {
                 e.stopPropagation()  
-                handleDel(index)
+                handleDel(id)
             }}
             />
                 </div>

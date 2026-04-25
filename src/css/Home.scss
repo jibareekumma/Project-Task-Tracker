@@ -41,14 +41,17 @@ $icon-bg: rgba(161, 178, 144);
 #home-page{
     display: flex;
     flex-direction: column;
-    background-color: $main-bg;
+    
     gap: 4rem;
     font-family: crimsonn;
     margin-bottom: 3rem;
+    height: 100vh;
+    background-color: rgba(15, 18, 27, 1);
 }
 
+
 .section1{
-    background-image: url(/public/photos/design\ d\ 1.jpeg);
+    background-image: url(/public/photos/home-photo\ 1.png);
     border: none;
     
     background-position: center;
@@ -89,17 +92,23 @@ $icon-bg: rgba(161, 178, 144);
                 border: none;
                 height: 3.5rem;
                 width: 3.5rem;
-                background-color: white;
+                background-color: none;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 50%;
-                &:hover{
-                    background-color: $btn-hover;
-                }
+                
                 img{
-                    width: 3rem;
-                    height: 3rem;
+                    width: 5rem;
+                    height: 5rem;
+                    filter: invert(1);
+                    &:hover{
+                        width: 5.5rem;
+                        height: 5.5rem;
+                        filter: invert(74%) sepia(69%) saturate(512%) 
+                    hue-rotate(135deg) brightness(95%) 
+                    contrast(95%);;
+                    }
                 }
             }
         }
@@ -129,7 +138,7 @@ $icon-bg: rgba(161, 178, 144);
         flex-direction: row;
         justify-content: space-between;
         padding: 1.5rem;
-        background-color: white;
+        background-color: $project-card;
         border-radius: 15px;
         box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -185,6 +194,9 @@ $icon-bg: rgba(161, 178, 144);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 0 1rem;
+   
+   
 
     .text-section{
         font-size: 2rem;
@@ -200,6 +212,7 @@ $icon-bg: rgba(161, 178, 144);
         display: flex;
         justify-content: space-between;
         font-family: crimsonn;
+        margin-bottom: 2rem;
 
         .social-icon{
             background-color: rgba(161, 178, 144);

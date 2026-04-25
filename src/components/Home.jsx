@@ -47,10 +47,10 @@ const Home = function(){
                 </div>
             </header>
 
-            <main>
+            {/* <main>
                 <h3>Stay Organized</h3>
                 <h4>Stay Ahead</h4>
-            </main>
+            </main> */}
             </div>
 
             <div className='review-index'>
@@ -62,7 +62,7 @@ const Home = function(){
                     <img src="/icons/progress bar home.png" alt="" />
                 </div>
                 <div className='image-container'>
-                    <img src="/photos/design d 2.jpeg" 
+                    <img src="/photos/home-photo 2.png" 
                     alt="Productivity management photo" />
                 </div>
             </div>
@@ -77,10 +77,14 @@ const Home = function(){
                     workspace.</p>
             </div>
             <div className='icons-section'>
-                <a className='social-icon' href=""><img src="/icons/github icon.png" alt="Github Icon" /></a>
-                <a className='social-icon' href=""><img src="/icons/x icon.png" alt="Twitter Icon" /></a>
-                <a className='social-icon' href=""><img src="/icons/reddit icon.png" alt="reddit Icon" /></a>
-                <a className='social-icon' href=""><img src="/icons/instagram icon.png" alt="instagram Icon" /></a>
+                <a className='social-icon' href="https://github.com/jibareekumma">
+                <img src="/icons/github icon.png" alt="Github Icon" /></a>
+                <a className='social-icon' href="https://x.com/devjibare">
+                <img src="/icons/x icon.png" alt="Twitter Icon" /></a>
+                <a className='social-icon' href="https://www.threads.com/@dev_jibare01?igshid=NTc4MTIwNjQ2YQ==">
+                    <img src="/icons/thread logo.png" alt="thread Icon" /></a>
+                <a className='social-icon' href="https://www.instagram.com/dev_jibare01?igsh=OWtpeGZubThldG5l&utm_source=qr">
+                    <img src="/icons/instagram icon.png" alt="instagram Icon" /></a>
             </div>
         </section>
 
@@ -97,10 +101,10 @@ const Home = function(){
                     onClick = {() => navigate("/register")}
                 >Sign Up</button>
             </nav>
-            <div className="dsk-hero-text">
+            {/* <div className="dsk-hero-text">
                 <h2>Stay Organized</h2>
                 <h2>Stay Ahead</h2>
-            </div>
+            </div> */}
             <div className="dsk-hero-badge">
                 <span className="dsk-badge-number">6M<span className="dsk-badge-plus">+</span></span>
                 <p className="dsk-badge-label">Active Users</p>
@@ -114,7 +118,7 @@ const Home = function(){
             
                 <img className = 'dsk-card-placeholder'
                 
-                src="public/photos/design d 2.jpeg" alt="" />
+                src="public/photos/home-photo 2.png" alt="" />
             
                    
 

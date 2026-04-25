@@ -292,5 +292,16 @@ body.dark{
         }
     }
 
+    #home-page{
+        background-color: $main-bg;
+        color: white;
+
+        .section2{
+            .text-section{
+                color: $text-secondary;
+            }
+        }
+    }
+
 }
 

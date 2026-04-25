@@ -169,4 +169,11 @@ body.dark #bitmoji-container .bitmoji-container .emoji-texts h3 {
 }
 body.dark #bitmoji-container .bitmoji-container .emoji-texts p {
   color: rgb(148, 155, 170);
+}
+body.dark #home-page {
+  background-color: rgb(15, 18, 27);
+  color: white;
+}
+body.dark #home-page .section2 .text-section {
+  color: rgb(148, 155, 170);
 }/*# sourceMappingURL=DarkMode.css.map */

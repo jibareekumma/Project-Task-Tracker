@@ -12,6 +12,7 @@ import { ProjectContext } from '../context/ProjectContext';
 import SearchFeature from './SearchFeature';
 import PercentageSort from '../utilities/PercentageSort'
 import { useNavigate } from 'react-router-dom';
+import { doSignOut } from '../config/auth.js'
 
 const TaskAdd = function () {
     const [showModal, setShowModal] = useState(false);
@@ -164,6 +165,9 @@ const TaskAdd = function () {
 
         <button onClick = { () => navigate("/home-page")}
         >Home Page</button>
+        <button 
+        onClick={() => doSignOut().then(() => navigate('/login'))}
+        >Sign Out</button>
     </>
 }
 

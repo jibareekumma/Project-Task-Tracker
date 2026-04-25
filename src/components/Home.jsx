@@ -40,7 +40,8 @@ const Home = function(){
                             ✕
                         </button>
                         <li>About Us</li>
-                        <li>Sign In</li>
+                        <li onClick = {() => navigate("/login") }> 
+                            Sign In</li>
                         <li onClick = {() => navigate("/register")}>Sign Up</li>
                     </ul>
                 </div>
@@ -61,7 +62,8 @@ const Home = function(){
                     <img src="/icons/progress bar home.png" alt="" />
                 </div>
                 <div className='image-container'>
-                    <img src="/photos/home-page photo.jpg" alt="GYM Lady Tying her sneekers" />
+                    <img src="/photos/design d 2.jpeg" 
+                    alt="Productivity management photo" />
                 </div>
             </div>
         </section>
@@ -112,7 +114,7 @@ const Home = function(){
             
                 <img className = 'dsk-card-placeholder'
                 
-                src="public/photos/task image.png" alt="" />
+                src="public/photos/design d 2.jpeg" alt="" />
             
                    
 

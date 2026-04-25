@@ -1,58 +1,56 @@
-import { useNavigate, Navigate } from "react-router-dom"
+import Register from "./Register"
 import "../css/Login.css"
-import { useState } from "react"
-import { docreateUserWithAndPassword, doSignInWithGoogle } from "../config/auth.js"
+import { useNavigate, Navigate } from "react-router-dom"
+import {doSignInWithEmailAndPassword, doSignInWithGoogle} 
+from "../config/auth.js"
 import { useAuth } from "../context/AuthContext/index.jsx"
+import { useState } from "react"
 
-const Register = function(){
 
-    const { userLoggedIn } = useAuth()
-    const navigate = useNavigate()
+const Login = function(){
+
+    const { userLoggedIn } = useAuth();
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
-    const [isRegistering, setIsRegistering] = useState(false)
+    const [isSigningIn, setIsSIgningIn] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
+
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        if(password !== confirmPassword){
-            setErrorMessage("Passwords do not match")
-            return
-        }
-
-        if(!isRegistering){
-            setIsRegistering(true)
+        if(!isSigningIn){
+            setIsSIgningIn(true)
             try {
-                await docreateUserWithAndPassword(email, password)
+                await doSignInWithEmailAndPassword(email, password)
             } catch (err) {
                 setErrorMessage(err.message)
-                setIsRegistering(false)
+                setIsSIgningIn(false)
             }
         }
     }
 
-    const onGoogleSignIn = async (e) => {
+    const onGoogleSignIn = async (e)=> {
         e.preventDefault()
 
-        if(!isRegistering){
-            setIsRegistering(true)
+        if(!isSigningIn){
+            setIsSIgningIn(true)
             try {
                 await doSignInWithGoogle()
             } catch (err) {
                 setErrorMessage(err.message)
-                setIsRegistering(false)
+                setIsSIgningIn(false)
             }
         }
     }
 
-    return<>
+    return <>
 
     {userLoggedIn && <Navigate to="/taskadd" replace={true} />}
 
-        <div className = "login-body">
+       <div className = "login-body">
 
         <div className = 'login-container'>
             <header>
@@ -78,22 +76,10 @@ const Register = function(){
                     <img src="icons/lock icon main.png"/>
                     </div>
                 <input type="password" 
-                placeholder = "Create your password" 
-                title = 'Create your password'
+                placeholder = "Enter your password" 
+                title = 'Enter your password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                />
-                </div>
-
-                <div id = 'inputz-container'>
-                    <div className = 'icon-container'>
-                    <img src="icons/lock icon main.png"/>
-                    </div>
-                <input type="password" 
-                placeholder = "Confirm your password" 
-                title = 'Confirm your password'
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
                 />
                 </div>
 
@@ -103,37 +89,43 @@ const Register = function(){
 
             <div className = "action-container">
 
-                <button onClick={handleSubmit} disabled={isRegistering}>
-                    {isRegistering ? "Creating account..." : "SIGN UP"}
+                <button onClick={handleSubmit} disabled={isSigningIn}>
+                    {isSigningIn ? "Signing in..." : "SIGN IN"}
                 </button>
-                
+                <a href="google.com">
+                    Forgot your password?
+                </a>
+                <p>Or</p>
             </div>
 
             <div className = 'auth-options'>
                 <div id = 'google-auth' className="auth" onClick={onGoogleSignIn}>
                     <img src="icons/google auth.png" 
                     alt="Google logo" />
-                    <p>Sign up with Google</p>
+                    <p>Sign in with Google</p>
                 </div>
 
                 <div id = 'github-auth' className="auth">
                     <img src="icons/github auth.png" 
                     alt="Github logo" id = 'github-auth-img' />
-                    <p>Sign up with Github</p>
+                    <p>Sign in with Github</p>
                 </div>
-                <p>Already have an account <a  
-                onClick = {() => navigate("/login")}
-                >Sign in</a></p>
+                <p>Don't have an account? <a  
+                onClick = {() => navigate("/register")}
+                >Sign Up</a></p>
             </div>
 
         </div>
+
+
 
         <div className="login-image-panel">
             <img src="icons/security lock.png" 
             alt="Lock Image" />
         </div>
        </div>
+
     </>
 }
 
-export default Register
+export default Login

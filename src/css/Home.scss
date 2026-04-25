@@ -41,13 +41,16 @@ $icon-bg: rgba(161, 178, 144);
 #home-page{
     display: flex;
     flex-direction: column;
+    background-color: $main-bg;
     gap: 4rem;
     font-family: crimsonn;
+    margin-bottom: 3rem;
 }
 
 .section1{
+    background-image: url(/public/photos/design\ d\ 1.jpeg);
     border: none;
-    background-image: url(/public//photos/home-page\ photo1\ \(mbl\).png);
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,7 +63,7 @@ $icon-bg: rgba(161, 178, 144);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     height: 75vh;
-    border-radius: 15px;
+    // border-radius: 15px;
 
     #container{
         display: flex;

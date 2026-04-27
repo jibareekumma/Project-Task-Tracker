@@ -138,6 +138,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 3rem;
 }
 .auth-options .auth {
   height: 4rem;

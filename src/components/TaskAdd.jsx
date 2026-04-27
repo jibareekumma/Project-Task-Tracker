@@ -12,7 +12,7 @@ import { ProjectContext } from '../context/ProjectContext';
 import SearchFeature from './SearchFeature';
 import PercentageSort from '../utilities/PercentageSort'
 import { useNavigate } from 'react-router-dom';
-import { doSignOut } from '../config/auth.js'
+
 import Introduction from './Introduction.jsx';
 
 const TaskAdd = function () {
@@ -165,12 +165,7 @@ const TaskAdd = function () {
         onClick = { () => setShowToast(false)}
         >
         </div>
-
-        <button onClick = { () => navigate("/home-page")}
-        >Home Page</button>
-        <button 
-        onClick={() => doSignOut().then(() => navigate('/login'))}
-        >Sign Out</button>
+        
     </>
 }
 

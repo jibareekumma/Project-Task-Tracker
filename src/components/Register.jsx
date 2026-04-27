@@ -9,6 +9,7 @@ const Register = function(){
     const { userLoggedIn } = useAuth()
     const navigate = useNavigate()
 
+    const [username, setUsername] = useState("")
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
@@ -26,7 +27,7 @@ const Register = function(){
         if(!isRegistering){
             setIsRegistering(true)
             try {
-                await docreateUserWithAndPassword(email, password)
+                await docreateUserWithAndPassword(email, password, username)
             } catch (err) {
                 setErrorMessage(err.message)
                 setIsRegistering(false)
@@ -60,6 +61,19 @@ const Register = function(){
             </header>
 
             <form id="login-form">
+
+
+                <div id = 'inputz-container'>
+                    <div className = 'icon-container'>
+                    <img src="icons/username icon.png"/>
+                    </div>
+                <input type="name" 
+                placeholder = "Enter your username" 
+                title = 'Enter your username'
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                />
+                </div>
 
                 <div id = 'inputz-container'>
                     <div className = 'icon-container'>

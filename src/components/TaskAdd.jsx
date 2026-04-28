@@ -1,7 +1,7 @@
 import '../css/TaskAdd.css'
 import { useState, useEffect} from 'react';
 import '../css/Modal.css'
-import "../css/Darkmode.css"
+import "../css/DarkMode.css"
 import CloseIcon from '/icons/xmark-solid.png'
 import SingleTask from './SingleTask';
 import Header from './Header';

@@ -35,7 +35,7 @@ useEffect(() => {
 }, [completed])
 
     
-     const project = projects.find((proj) => proj.id === Number(id))
+    const project = projects.find((proj) => String(proj.id) === String(id))
 
      if (!project) {
     return <h2>Project not found</h2>
@@ -116,7 +116,7 @@ Math.round((completed.length / taskCount) * 100)
                     <img src="/icons/trash-solid-full.svg" 
                     alt="Delete icon"
                     title = 'Delete Task' 
-                    onClick = {() => handleTaskDel(id)}
+                    onClick = {() => handleTaskDel(index)}
                     />
                 </div> 
                 ) }

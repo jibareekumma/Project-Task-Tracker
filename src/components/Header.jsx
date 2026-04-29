@@ -25,7 +25,7 @@ const { currentUser } = useAuth()
     return <header className = "first-page-header">
         <div className = "upper-div">
             <div className = "header-text">
-                <h4>Good Morning, { username }</h4>
+                <h4>Greetings, { username }</h4>
                 <p>{today}</p>
             </div>
 

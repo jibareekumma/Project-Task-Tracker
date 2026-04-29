@@ -1,18 +1,21 @@
+
 import '../css/TaskAdd.css'
 import { useState, useEffect} from 'react';
 import '../css/Modal.css'
 import "../css/DarkMode.css"
 import CloseIcon from '/icons/xmark-solid.png'
+
 import SingleTask from './SingleTask';
 import Header from './Header';
 import EntireTask from './EntireTask';
 import RecentHeader from './RecentHeader';
+
 import { useContext } from 'react';
 import { ProjectContext } from '../context/ProjectContext';
 import SearchFeature from './SearchFeature';
 import PercentageSort from '../utilities/PercentageSort'
-import { useNavigate } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
 import Introduction from './Introduction.jsx';
 
 const TaskAdd = function () {
@@ -30,6 +33,7 @@ const TaskAdd = function () {
     setProject('')
     setCategory('')
     setShowModal(false)
+
     setShowToast(true)
     setToastLoader((prev) => prev + 1)
 
@@ -109,6 +113,7 @@ const TaskAdd = function () {
                     onClick={closeModal}
                 />
             </div>
+
             <form onSubmit={(e) => e.preventDefault()}>
                 <input
                     type="text"
@@ -136,7 +141,7 @@ const TaskAdd = function () {
                     <option value="Finance">Finance</option>
                     <option value="Creative">Creative</option>
                     <option value="Home">Home</option>
-                    <option value="Event">Creative</option>
+                    <option value="Creative">Creative</option>
                     <option value="Development">Development</option>
                     <option value="Research">Research</option>
                     <option value="Other">Other</option>

@@ -57,7 +57,7 @@ const Introduction = function(){
                         </div>
                     </div>
                     <div className='bitmoji-section'>
-                        <img src = '/public/photos/bitmoji dashboard 1.png' 
+                        <img src = '/photos/bitmoji dashboard 1.png' 
                         alt = "man working on computer"/>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ const Introduction = function(){
                             </div>
                         </div>
                         <div className='bitmoji-section'>
-                            <img src = "/public/photos/bitmoji dashboard 2.png" 
+                            <img src = "/photos/bitmoji dashboard 2.png" 
                             alt = "Man working out"
                             />
                         </div>

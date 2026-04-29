@@ -40,7 +40,7 @@ const Introduction = function(){
         
         <main id='bitmoji-container'>
 
-            {/* MOBILE: single card carousel */}
+            
             <div className='bitmoji-carousel'>
                 <div className='bitmoji-container'>
                     <div className='introductory-texts'>
@@ -57,11 +57,12 @@ const Introduction = function(){
                         </div>
                     </div>
                     <div className='bitmoji-section'>
-                        <img src={current.img} alt={current.alt} />
+                        <img src = 'public/photos/bitmoji dashboard 1.png' 
+                        alt = "man working on computer"/>
                     </div>
                 </div>
 
-                {/* Dot buttons */}
+                
                 <div className='carousel-dots'>
                     {slides.map((_, i) => (
                         <button
@@ -73,7 +74,8 @@ const Introduction = function(){
                 </div>
             </div>
 
-            {/* DESKTOP: both cards side by side */}
+            
+
             <div className='bitmoji-desktop'>
                 {slides.map((slide, i) => (
                     <div key={i} className='bitmoji-container'>
@@ -91,7 +93,9 @@ const Introduction = function(){
                             </div>
                         </div>
                         <div className='bitmoji-section'>
-                            <img src={slide.img} alt={slide.alt} />
+                            <img src = "public/photos/bitmoji dashboard 2.png" 
+                            alt = "Man working out"
+                            />
                         </div>
                     </div>
                 ))}

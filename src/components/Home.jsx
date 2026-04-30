@@ -47,10 +47,8 @@ const Home = function(){
                 </div>
             </header>
 
-            {/* <main>
-                <h3>Stay Organized</h3>
-                <h4>Stay Ahead</h4>
-            </main> */}
+            
+
             </div>
 
             <div className='review-index'>
@@ -62,7 +60,7 @@ const Home = function(){
                     <img src="/icons/progress bar home.png" alt="" />
                 </div>
                 <div className='image-container'>
-                    <img src="/photos/home-photo 2.png" 
+                    <img src="/photos/home-photo-2.png" 
                     alt="Productivity management photo" />
                 </div>
             </div>
@@ -101,10 +99,8 @@ const Home = function(){
                     onClick = {() => navigate("/register")}
                 >Sign Up</button>
             </nav>
-            {/* <div className="dsk-hero-text">
-                <h2>Stay Organized</h2>
-                <h2>Stay Ahead</h2>
-            </div> */}
+            
+
             <div className="dsk-hero-badge">
                 <span className="dsk-badge-number">6M<span className="dsk-badge-plus">+</span></span>
                 <p className="dsk-badge-label">Active Users</p>
@@ -118,7 +114,8 @@ const Home = function(){
             
                 <img className = 'dsk-card-placeholder'
                 
-                src="/photos/home-photo 2.png" alt="" />
+                src="/photos/home-photo-2.png" 
+                alt="Card Shwoing progress" />
             
                    
 
@@ -129,10 +126,14 @@ const Home = function(){
                     to completion in one simple workspace.
                 </p>
                 <div className="dsk-icons-row">
-                    <a className='social-icon' href=""><img src="/icons/github icon.png" alt="Github Icon" /></a>
-                    <a className='social-icon' href=""><img src="/icons/x icon.png" alt="Twitter Icon" /></a>
-                    <a className='social-icon' href=""><img src="/icons/reddit icon.png" alt="reddit Icon" /></a>
-                    <a className='social-icon' href=""><img src="/icons/instagram icon.png" alt="instagram Icon" /></a>
+                    <a className='social-icon' href=""><img 
+                    src="/icons/github icon.png" alt="Github Icon" /></a>
+                    <a className='social-icon' href=""><img 
+                    src="/icons/x icon.png" alt="Twitter Icon" /></a>
+                    <a className='social-icon' href=""><img 
+                    src="/icons/reddit icon.png" alt="reddit Icon" /></a>
+                    <a className='social-icon' href=""><img 
+                    src="/icons/instagram icon.png" alt="instagram Icon" /></a>
                 </div>
                 <div className="dsk-stat-block">
                     <span className="dsk-stat-number">92.5<span className="dsk-stat-pct">%</span></span>

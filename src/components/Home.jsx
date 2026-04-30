@@ -95,7 +95,7 @@ const Home = function(){
                     <li className="dsk-nav-active">Home</li>
                     <li>About Us</li>
                     <li onClick = {() => navigate("/register")}>Register</li>
-                    <li>Login</li>
+                    <li onClick = { () => navigate("/login")}>Login</li>
                 </ul>
                 <button className="dsk-nav-btn"
                     onClick = {() => navigate("/register")}
@@ -118,7 +118,7 @@ const Home = function(){
             
                 <img className = 'dsk-card-placeholder'
                 
-                src="public/photos/home-photo 2.png" alt="" />
+                src="/photos/home-photo 2.png" alt="" />
             
                    
 
